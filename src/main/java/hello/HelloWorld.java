@@ -1,5 +1,7 @@
 package hello;
 
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
         //the program starts executing here
@@ -78,10 +80,33 @@ public class HelloWorld {
 //
 //        System.out.println(y);
 
-        byte myByte = 127;
-        System.out.println(myByte);
+//        String myName = "Jeremy";
+//
+//        byte myByte = 127;
+//        System.out.println(myByte);
 
 
+//        System.out.printf("hello %n");
+//        System.out.printf("hey there  %s, %05d", myName, myByte);
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("enter your name: ");
+//        single token
+//        String aName = input.next();
+//        multi token
+        String aName = input.nextLine();
+        System.out.println("your name is: " + aName);
+
+        System.out.print("enter age: ");
+        int age = input.nextInt();
+        System.out.println("your name is " + aName + " and your age is " + age + ".");
+
+
+
+//        System.out.println("your name is " + aName);
+
+        input.close();
 
 
 
