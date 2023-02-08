@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
-//        double pi = 3.14159;
-//        System.out.printf("The value of pi is approximately %.2f.\n", pi);
+        double pi = 3.14159;
+        System.out.printf("The value of pi is approximately %.2f%n", pi);
 
         Scanner input = new Scanner(System.in);
 
@@ -11,28 +11,57 @@ public class ConsoleExercises {
 //        int anInt = input.nextInt();
 //        System.out.println("your integer is: " + anInt);
 
-//        System.out.println("enter first word: ");
+//        System.out.print("enter three words: ");
 //        String firstWord = input.next();
-////        System.out.println("first word: " + firstWord);
-//
-//        System.out.println("enter second word: ");
 //        String secondWord = input.next();
-////        System.out.println("second word: " + secondWord);
-//
-//        System.out.println("enter third word: ");
 //        String thirdWord = input.next();
-////        System.out.println("third word: " + thirdWord);
-//        System.out.printf("words: %s, %s, %s", firstWord, secondWord, thirdWord);
+////        string, next, string, next...
+//        System.out.printf("%s%n%s%n%s%n", firstWord, secondWord, thirdWord);
 
-        System.out.print("enter room's width: ");
-        int roomWidth = input.nextInt();
-        System.out.print("enter room's length: ");
-        int roomLength = input.nextInt();
-        System.out.println("your room's area is: " + roomWidth * roomLength + " square feet");        System.out.println("your room's perimeter is: " + (2 * roomWidth + 2 * roomLength) + " linear feet");
+//        System.out.println("enter a sentence: ");
+//        String sentence = input.nextLine();
+//        System.out.println(sentence);
 
-        System.out.print("enter room's height: ");
-        int roomHeight = input.nextInt();
-        System.out.println("your room's perimeter is: " + (roomWidth * roomLength * roomHeight) + " cubic feet");
+//        System.out.println("enter room's width: ");
+//        String str = input.nextLine();
+//        int roomWidth = Integer.parseInt(str);
+//
+//        System.out.println("enter room's length: ");
+//        String str2 = input.nextLine();
+//        int roomLength = Integer.parseInt(str2);
+//
+//        Integer area = roomWidth * roomLength;
+//        Integer perimeter = (2 * roomWidth) + (2 * roomLength);
+//
+//        System.out.printf("area: %s square feet%n", area);
+//        System.out.printf("perimeter: %s linear feet%n", perimeter);
+//
+//        System.out.println("enter room's height: ");
+//        String str3 = input.nextLine();
+//        int roomHeight = Integer.parseInt(str3);
+//        Integer volume = roomWidth * roomLength * roomHeight;
+
+//        System.out.printf("""width: %s feet%nlength: %s feet%n height: %s feet%n volume: %s cubic feet""", str, str2, str3, volume);
+
+        input.close();
+
+
+        double money = .1;
+        System.out.println(money);
+
+        money += .1;
+        System.out.println(money);
+
+        money += .1;
+        System.out.println(money);
+
+
+//        for (int i = 0; i < 10; i++) {
+//            if(i % 2 == 1) { //              |
+//                continue; // ----------------+
+//            }
+//            System.out.println(i);
+//        }
 
     }
 
