@@ -48,6 +48,7 @@ public class ConsoleExercises {
 
         double money = .1;
         System.out.println(money);
+        System.out.println(money);
 
         money += .1;
         System.out.println(money);
