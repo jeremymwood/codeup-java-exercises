@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int age = -1;
+//        int age = -1;
 //        String name = null;
 //        if (name == null) {
 //            System.out.println("Invalid name");
 //        } else {
 //            System.out.printf("name is: %s%n", name);
 //        }
-        Scanner input = new Scanner("bob");
-        String myName = "ted";
-        String otherName = input.next();
+//        Scanner input = new Scanner("bob");
+//        String myName = "ted";
+//        String otherName = input.next();
 
 //        System.out.println(myName == otherName);
 //
@@ -53,34 +53,90 @@ public class ControlFlowExercises {
 //        }
 //        System.out.println(msg);
 
-        input.close();
+//        input.close();
 
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        String choice = "";
-        boolean done = false;
-        do {
-            //prompt for choice
-            //prompt for choice
-            System.out.println("make a choice: ");
+//        String choice = "";
+//        boolean done = false;
+//        do {
+//            //prompt for choice
+//            //prompt for choice
+//            System.out.println("make a choice: ");
+//
+//            //get choice via scanner
+//            choice = input.nextLine();
+//
+//            System.out.printf("you entered %s%n", choice);
+//
+//            //determine done
+//            if (choice.equals("quit")) {
+//                done = true;
+//                break;
+//            }
+//
+//        } while (!done);
+//
+//        for (int i = 0; i < choice.length(); i++) {
+//            System.out.println(choice.charAt(i));
+//        }
 
-            //get choice via scanner
-            choice = input.nextLine();
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.print(i + " ");
+//            i++;
+//        }
 
-            System.out.printf("you entered %s%n", choice);
 
-            //determine done
-            if (choice.equals("quit")) {
-                done = true;
-                break;
-            }
+//        int i = 0, n = 100;
+//        do {
+//            System.out.println(i);
+//            i += 2;
+//        } while(i <= n);
 
-        } while (!done);
+//        int i = 100, n = -10;
+//        do {
+//            System.out.println(i);
+//            i -= 5;
+//        } while(i >= n);
 
-        for (int i = 0; i < choice.length(); i++) {
-            System.out.println(choice.charAt(i));
+//        infinite loop
+//        int i = 2;
+//        int n = 100000;
+//        do {
+//            System.out.println(i);
+//            i *= i;
+////            if (i > 65537) {
+////                break;
+////            }
+//        } while(i < n);
+
+//        for (int j = 2; j < 1000000; j*=j) {
+//            System.out.println(j);
+//            if (j == 65536) {
+//                break;
+//            }
+//        }
+
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+        System.out.println("number | squared | cubed");
+        for (int i = 1; i < 6; i++) {
+//            for (int j = i; j < 26; j = i * j) {
+//                System.out.printf("%-7s|%n", j);
+//
+//            }
+            System.out.printf("%-7s| %-8s| %-5s%n", i, i, i);
         }
-
 
         input.close();
 
