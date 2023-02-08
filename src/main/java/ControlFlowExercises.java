@@ -129,31 +129,37 @@ public class ControlFlowExercises {
 //                System.out.println(i);
 //            }
 //        }
-//        System.out.println("number | squared | cubed");
-//        for (int i = 1; i < 6; i++) {
-//            int j = i * i;
-//            int k = i * i * i;
-//            System.out.printf("%-7s| %-8s| %-5s%n", i, j, k);
-//        }
-
-        System.out.println("enter a grade: ");
+        System.out.println("enter a number: ");
         String str = input.nextLine();
-        int grade = Integer.parseInt(str);
+        int squareNum = Integer.parseInt(str);
+        boolean done = false;
 
-
-        if (grade <= 100 && grade >= 88) {
-            System.out.println("grade: A");
-        } else if (grade <= 87 && grade >= 80) {
-            System.out.println("grade: B");
-        } else if (grade <= 79 && grade >= 67) {
-            System.out.println("grade: C");
-        } else if (grade <= 66 && grade >= 60) {
-            System.out.println("grade: D");
-        } else if (grade <= 59 && grade >= 0) {
-            System.out.println("grade: F");
-        } else {
-            System.out.println("NOT A GRADE!");
+        System.out.println("number | squared | cubed");
+        for (int i = 1; i < squareNum + 1; i++) {
+            int j = i * i;
+            int k = i * i * i;
+            System.out.printf("%-7s| %-8s| %-5s%n", i, j, k);
         }
+
+
+//        System.out.println("enter a grade: ");
+//        String str = input.nextLine();
+//        int grade = Integer.parseInt(str);
+
+
+//        if (grade <= 100 && grade >= 88) {
+//            System.out.println("grade: A");
+//        } else if (grade <= 87 && grade >= 80) {
+//            System.out.println("grade: B");
+//        } else if (grade <= 79 && grade >= 67) {
+//            System.out.println("grade: C");
+//        } else if (grade <= 66 && grade >= 60) {
+//            System.out.println("grade: D");
+//        } else if (grade <= 59 && grade >= 0) {
+//            System.out.println("grade: F");
+//        } else {
+//            System.out.println("NOT A GRADE!");
+//        }
 
         input.close();
 
