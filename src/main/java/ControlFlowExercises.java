@@ -131,11 +131,9 @@ public class ControlFlowExercises {
 //        }
         System.out.println("number | squared | cubed");
         for (int i = 1; i < 6; i++) {
-//            for (int j = i; j < 26; j = i * j) {
-//                System.out.printf("%-7s|%n", j);
-//
-//            }
-            System.out.printf("%-7s| %-8s| %-5s%n", i, i, i);
+            int j = i * i;
+            int k = i * i * i;
+            System.out.printf("%-7s| %-8s| %-5s%n", i, j, k);
         }
 
         input.close();
