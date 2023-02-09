@@ -21,9 +21,9 @@ public class ControlFlowExercises {
 //        System.out.println(myName.equals(otherName));
 
 //        if (myName.equals(otherName)) {
-//            System.out.println("samesies");
+//            System.out.println("same");
 //        } else {
-//            System.out.println("not samesies");
+//            System.out.println("not same");
 //        }
 
 //        switch (otherName.length()) {
@@ -246,15 +246,18 @@ public class ControlFlowExercises {
 //        String formattedAge = "" + age;
 //        System.out.printf("%s is %s years old", myName, age);
 
-        String sentence = "The quick brown fox jumps over the lazy dog.";
-//        System.out.println(sentence.indexOf(" ", 4));
+        String bigString = "The quick brown fox jumps over the lazy dog.";
+//        System.out.println(bigString.indexOf(" ", 4));
 
-        int index = -1;
-        do {
-            index = sentence.indexOf(" ", index + 1);
-            if (index > -1) {
-                System.out.printf("found a space at index %s%n", index);
-            }
-        }while (index > -1);
+//        int index = -1;
+//        do {
+//            index = bigString.indexOf(" ", index + 1);
+//            if (index > -1) {
+//                System.out.printf("found a space at index %s%n", index);
+//            }
+//        }while (index > -1);
+
+        System.out.println(bigString.replaceAll(" ", "|"));
+        System.out.println(bigString);
     }
 }
