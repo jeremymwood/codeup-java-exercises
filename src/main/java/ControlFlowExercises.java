@@ -100,22 +100,26 @@ public class ControlFlowExercises {
 //            i -= 5;
 //        } while(i >= n);
 
-//        infinite loop
-//        int i = 2;
-//        int n = 100000;
+//        long i = 2;
 //        do {
 //            System.out.println(i);
 //            i *= i;
-////            if (i > 65537) {
-////                break;
-////            }
-//        } while(i < n);
+//        } while(i < 1000000);
 
-//        for (int j = 2; j < 1000000; j*=j) {
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.print(i + " ");
+//        }
+
+//        for (int i = 0; i <= 100; i+=2) {
+//            System.out.println(i);
+//        }
+
+//        for (int i = 100; i >= -10; i -= 5) {
+//            System.out.println(i);
+//        }
+
+//        for (long j = 2; j <= 1000000; j*=j) {
 //            System.out.println(j);
-//            if (j == 65536) {
-//                break;
-//            }
 //        }
 
 //        for (int i = 1; i <= 100; i++) {
@@ -129,24 +133,79 @@ public class ControlFlowExercises {
 //                System.out.println(i);
 //            }
 //        }
-        System.out.println("enter a number: ");
-        String str = input.nextLine();
-        int squareNum = Integer.parseInt(str);
-        boolean done = false;
 
-        System.out.println("number | squared | cubed");
-        for (int i = 1; i < squareNum + 1; i++) {
-            int j = i * i;
-            int k = i * i * i;
-            System.out.printf("%-7s| %-8s| %-5s%n", i, j, k);
-        }
+        //plot next to all numbers
+//        for (int i = 1; i <= 100; i++) {
+//            System.out.print(i + ", ");
+//            if (i % 3 == 0) {
+//                System.out.print("Fizz");
+//            }
+//            if (i % 5 == 0) {
+//                System.out.print("Buzz");
+//            }
+//            System.out.println();
+//        }
 
+//        System.out.println("enter a number: ");
+//        String str = input.nextLine();
+//        int squareNum = Integer.parseInt(str);
+//
+//        System.out.print("""
+//            | number | squared | cubed |
+//            | ------ | ------- | ----- |
+//            """);
+//        for (int i = 1; i < squareNum + 1; i++) {
+//            int j = i * i;
+//            int k = i * i * i;
+//            System.out.printf("| %-7s| %-8s| %-5s |%n", i, j, k);
+//        }
+
+//        boolean done = false;
+//        do {
+//        System.out.println("enter a number: ");
+//        String str = input.nextLine();
+//        int squareNum = Integer.parseInt(str);
+//
+//        System.out.println("number | squared | cubed");
+//        for (int i = 1; i < squareNum + 1; i++) {
+//            int j = i * i;
+//            int k = i * i * i;
+//            System.out.printf("%-7s| %-8s| %-5s%n", i, j, k);
+//        }
+//        if (str.equals("quit")) {
+//            done = true;
+//            break;
+//        }
+//        } while (!done);
+
+
+//        String choice = "";
+//        boolean done = false;
+//        do {
+//            //prompt for choice
+//            //prompt for choice
+//            System.out.println("make a choice: ");
+//
+//            //get choice via scanner
+//            choice = input.nextLine();
+//
+//            System.out.printf("you entered %s%n", choice);
+////
+//            //determine done
+//            if (choice.equals("quit")) {
+//                done = true;
+//                break;
+//            }
+//
+//        } while (!done);
 
 //        System.out.println("enter a grade: ");
 //        String str = input.nextLine();
 //        int grade = Integer.parseInt(str);
-
-
+//
+//
+//
+//
 //        if (grade <= 100 && grade >= 88) {
 //            System.out.println("grade: A");
 //        } else if (grade <= 87 && grade >= 80) {
@@ -161,7 +220,41 @@ public class ControlFlowExercises {
 //            System.out.println("NOT A GRADE!");
 //        }
 
+
+        //doc's solution... didn't really work
+//        System.out.println("enter a grade: ");
+//        int str = input.nextLine();
+//        input.nextLine();
+//        String grade = "F";
+//
+//        if (str >= 88) {
+//            grade = "A";
+//        } else if (str >= 80) {
+//            grade = "B";
+//        } else if (str >= 67) {
+//            grade = "C";
+//        } else if (str >= 60) {
+//            grade = "D";
+//        }
+//        System.out.println(grade);
+
         input.close();
 
+
+//        String myName = "jeremy";
+//        int age = 36;
+//        String formattedAge = "" + age;
+//        System.out.printf("%s is %s years old", myName, age);
+
+        String sentence = "The quick brown fox jumps over the lazy dog.";
+//        System.out.println(sentence.indexOf(" ", 4));
+
+        int index = -1;
+        do {
+            index = sentence.indexOf(" ", index + 1);
+            if (index > -1) {
+                System.out.printf("found a space at index %s%n", index);
+            }
+        }while (index > -1);
     }
 }
