@@ -16,18 +16,23 @@ public class Bob {
             int targetIndex = question.length() -1;
             String answerLastChar = String.valueOf(question.charAt(targetIndex));
 
-            if (answerLastChar.equals("?")) {
-                System.out.println("Sure.");
-            } else if (answerLastChar.equals("!")) {
-                System.out.println("Whoa, chill out!");
+            if (question.indexOf("?") > -1) {
+                System.out.println("Bob: Sure.");
+            }
+
+//            if (answerLastChar.equals("?")) {
+//                System.out.println("Bob: Sure.");
+//            }
+            else if (answerLastChar.equals("!")) {
+                System.out.println("Bob: Whoa, chill out!");
 
             } else if (question.equals(" ")) {
-                System.out.println("Fine, be that way!");
+                System.out.println("Bob: Fine, be that way!");
             } else if (question.equals("bye")) {
-                System.out.println("bye yourself");
+                System.out.println("Bob: bye yourself");
                 break;
             } else {
-                System.out.println("Whatever.");
+                System.out.println("Bob: Whatever.");
             }
         } while (!question.equals("bye"));
 
