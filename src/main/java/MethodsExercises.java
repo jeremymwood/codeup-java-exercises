@@ -1,4 +1,4 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class MethodsExercises {
 //    private static String myName;
@@ -26,9 +26,9 @@ public class MethodsExercises {
 //        // create a sayHello method with a string param
 //        // point out the parts of method signature
 //        // remind students of difference in DEFINING and CALLING a method
-//        System.out.println(sayHello("bob"));
+//        System.out.println(sayHello("Bob"));
 //        System.out.println(MethodsExercises.sayHello());
-//        System.out.println(MethodsExercises.sayHello(5));
+//        System.out.println(MethodsExercises.sayHello(2));
 //
 //        // overload with a sayHello method with no parameters
 //        // introduce NO ARG term
@@ -56,16 +56,7 @@ public class MethodsExercises {
 //
 //        input.close();
 //    }
-
-//    private static int getNumberFromOneTo10(Scanner input) {
-//        System.out.print("Enter number from 1 to 10: ");
-//        int aNumber = input.nextInt();
-//        if(aNumber < 1 || aNumber > 10) {
-//            return getNumberFromOneTo10(input);
-//        }
-//        // otherwise you did it right so return it
-//        return aNumber;
-//    }
+//
 //
 //    private static String makeNewName(String newName) {
 //        return newName;
@@ -75,35 +66,90 @@ public class MethodsExercises {
 //        myName = newName;
 //        System.out.println("oldName is now " + myName);
 //    }
+//
+//    private static int getNumberFromOneTo10(Scanner input) {
+//        System.out.print("Enter number from 1 to 10: ");
+//        int aNumber = input.nextInt();
+//        if(aNumber < 1 || aNumber > 10) {
+//            return getNumberFromOneTo10(input);
+//        }
+//        // otherwise you did it right so return it
+//        return aNumber;
+//    }
 
-    public static long fib(int n) {
-        long fibN = 0;
-        long nMinus1 = 1;
-        long nMinus2 = 0;
 
-        if(n == 0) {
-            return 0;
-        }
-        if(n == 1) {
-            return 1;
-        }
 
-        for(int i = 2; i <= n; i++) {
-            fibN = nMinus1 + nMinus2;
-            nMinus2 = nMinus1;
-            nMinus1 = fibN;
-        }
-        return fibN;
+//    public static long fib(int n) {
+//        long fibN = 0;
+//        long nMinus1 = 1;
+//        long nMinus2 = 0;
+//
+//        if(n == 0) {
+//            return 0;
+//        }
+//        if(n == 1) {
+//            return 1;
+//        }
+//
+//        for(int i = 2; i <= n; i++) {
+//            fibN = nMinus1 + nMinus2;
+//            nMinus2 = nMinus1;
+//            nMinus1 = fibN;
+//        }
+//        return fibN;
+//    }
+//
+//    public static void main(String[] args) {
+//        long start = System.currentTimeMillis();
+//        System.out.println(fib(50));
+//
+//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+//    }
+
+    public static int addition(int num1, int num2) {
+        System.out.printf("addition: %s + %s = ", num1, num2);
+        return num1 + num2;
+    }
+    public static int subtraction(int num1, int num2) {
+        System.out.printf("subtraction: %s - %s = ", num1, num2);
+        return num1 - num2;
+    }
+    public static int multiplication(int num1, int num2) {
+        System.out.printf("multiplication: %s * %s = ", num1, num2);
+        return num1 * num2;
+    }
+    public static double division(int num1, int num2) {
+        double q = (double) num1 / num2;
+        System.out.printf("division: %s / %s = ", num1, num2);
+        return q;
+    }
+    public static int modulus(int num1, int num2) {
+        System.out.printf("modulus: %s / %s = ", num1, num2);
+        return num1 % num2;
+    }
+
+    public static int getInteger(Scanner input) {
+    System.out.print("Enter number from 1 to 10: ");
+    int aNumber = input.nextInt();
+    if(aNumber < 1 || aNumber > 10) {
+        return getInteger(input);
+    }
+    System.out.printf("huzzah! %s is a decad number!", aNumber);
+    return aNumber;
     }
 
     public static void main(String[] args) {
-        long start = System.currentTimeMillis();
-        System.out.println(fib(50));
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+        System.out.println(addition(10,4));
+        System.out.println(subtraction(10,4));
+        System.out.println(multiplication(10,4));
+        System.out.println(division(17,0));
+        System.out.println(modulus(10,4));
+
+        int n = getInteger(input);
+
     }
-
-
 
 
 
