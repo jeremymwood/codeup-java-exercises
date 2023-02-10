@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.lang.Math;
+
 
 public class MethodsExercises {
 //    private static String myName;
@@ -79,29 +81,28 @@ public class MethodsExercises {
 
 
 
+//   public class FibonacciRecursive {
+//    /*
+//    f(n) = f(n-1) + f(n-2)
+//     */
 //    public static long fib(int n) {
-//        long fibN = 0;
-//        long nMinus1 = 1;
-//        long nMinus2 = 0;
-//
 //        if(n == 0) {
 //            return 0;
 //        }
 //        if(n == 1) {
 //            return 1;
 //        }
-//
-//        for(int i = 2; i <= n; i++) {
-//            fibN = nMinus1 + nMinus2;
-//            nMinus2 = nMinus1;
-//            nMinus1 = fibN;
-//        }
-//        return fibN;
+//        return fib(n - 1) + fib(n - 2);
 //    }
 //
 //    public static void main(String[] args) {
 //        long start = System.currentTimeMillis();
 //        System.out.println(fib(50));
+//
+//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+//    }
+//}
+
 //
 //        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
 //    }
@@ -138,16 +139,48 @@ public class MethodsExercises {
     return aNumber;
     }
 
+    public static int factorial(Scanner input) {
+        System.out.print("Enter number from 1 to 10: ");
+        int aNumber = input.nextInt();
+        int factorialNum = 1;
+        if(aNumber < 1 || aNumber > 10) {
+            return factorial(input);
+        }
+        for (int i = 1; i <= aNumber; i++) {
+             factorialNum *= i;
+        }
+//            return factorialNum;
+        System.out.printf("The factorial of %s is: %s", aNumber, factorialNum);
+        return aNumber;
+    }
+
+
+    public static int diceRoller(Scanner input) {
+        System.out.print("Enter the number of sides for your pair of dice: ");
+        int aNumber = input.nextInt();
+        int min = 1;
+        int max = aNumber;
+        int range = max - min + 1;
+
+        int roll1 = (int) (Math.random() * range) + min;
+        int roll2 = (int) (Math.random() * range) + min;
+        System.out.printf("Your D%s roll is %s and %s", aNumber, roll1, roll2);
+        return aNumber;
+    }
+
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println(addition(10,4));
-        System.out.println(subtraction(10,4));
-        System.out.println(multiplication(10,4));
-        System.out.println(division(17,0));
-        System.out.println(modulus(10,4));
+//        System.out.println(addition(10,4));
+//        System.out.println(subtraction(10,4));
+//        System.out.println(multiplication(10,4));
+//        System.out.println(division(17,0));
+//        System.out.println(modulus(10,4));
 
-        int n = getInteger(input);
+//        getInteger(input);
+//        factorial(input);
+        diceRoller(input);
 
     }
 
