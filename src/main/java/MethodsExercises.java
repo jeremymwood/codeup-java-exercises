@@ -168,6 +168,36 @@ public class MethodsExercises {
         return aNumber;
     }
 
+    public static int HighLow(Scanner input) {
+        System.out.print("Guess my number: ");
+        int aNumber = input.nextInt();
+        int min = 1;
+        int max = 100;
+        if(aNumber < min || aNumber > max) {
+            return HighLow(input);
+        }
+        int result = (int) (Math.random() * max) + min;
+
+        if (aNumber > result) {
+            System.out.println("LOWER");
+            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+            return aNumber;
+        }
+        if (aNumber < result) {
+            System.out.println("HIGHER");
+            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+            return aNumber;
+        }
+        if (aNumber == result) {
+            System.out.println("GOOD GUESS RAINMAN!");
+            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+            return aNumber;
+        }
+        return aNumber;
+    }
+
+
+
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -180,7 +210,8 @@ public class MethodsExercises {
 
 //        getInteger(input);
 //        factorial(input);
-        diceRoller(input);
+//        diceRoller(input);
+//        HighLow(input);
 
     }
 
@@ -189,3 +220,6 @@ public class MethodsExercises {
 
 
 }
+
+
+
