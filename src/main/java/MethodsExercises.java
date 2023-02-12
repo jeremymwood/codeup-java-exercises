@@ -8,11 +8,11 @@ public class MethodsExercises {
 //    public static String sayHello(String name) {
 //        return String.format("Hello, %s!", name);
 //    }
-//
+
 //    public static String sayHello() {
 //        return String.format("Hello there!");
 //    }
-//
+
 //    public static String sayHello(int numRepeats) {
 //        String str = "";
 //        for (int i = 0; i < numRepeats; i++) {
@@ -79,33 +79,56 @@ public class MethodsExercises {
 //        return aNumber;
 //    }
 
-
-
-//   public class FibonacciRecursive {
-//    /*
-//    f(n) = f(n-1) + f(n-2)
-//     */
 //    public static long fib(int n) {
+//        long fibN = 0;
+//        long nMinus1 = 1;
+//        long nMinus2 = 0;
+//
 //        if(n == 0) {
 //            return 0;
 //        }
 //        if(n == 1) {
 //            return 1;
 //        }
-//        return fib(n - 1) + fib(n - 2);
+//
+//        for(int i = 2; i <= n; i++) {
+//            fibN = nMinus1 + nMinus2;
+//            nMinus2 = nMinus1;
+//            nMinus1 = fibN;
+//        }
+//        return fibN;
 //    }
 //
-//    public static void main(String[] args) {
-//        long start = System.currentTimeMillis();
-//        System.out.println(fib(50));
+//    public static long fibOutput(Scanner input) {
+//        System.out.println("how many fibonacci numbers would yo like to plot?");
+//        int n = input.nextInt();
 //
-//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+//        long fibN = 0;
+//        long nMinus1 = 1;
+//        long nMinus2 = 0;
+//        String fibOutput = "";
+//
+////            if(n == 0) {
+////                System.out.println("0, ");
+////                return 0;
+////            }
+////            if(n == 1) {
+////                System.out.println("1, ");
+////                return 1;
+////            }
+//
+//        for(int i = 2; i <= n; i++) {
+////            fibOutput = fibN.toString();
+//            fibN = nMinus1 + nMinus2;
+//            nMinus2 = nMinus1;
+//            nMinus1 = fibN;
+//        }
+//
+////        System.out.printf("%s.", fibN);
+//        return fibN;
 //    }
-//}
 
-//
-//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
-//    }
+
 
     public static int addition(int num1, int num2) {
         System.out.printf("addition: %s + %s = ", num1, num2);
@@ -197,23 +220,28 @@ public class MethodsExercises {
     }
 
 
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+
+//        long start = System.currentTimeMillis();
+//        System.out.println(fib(200000));
+
+//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+//        System.out.println(fibOutput(input));
 
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-//        System.out.println(addition(10,4));
-//        System.out.println(subtraction(10,4));
-//        System.out.println(multiplication(10,4));
-//        System.out.println(division(17,0));
-//        System.out.println(modulus(10,4));
+        System.out.println(addition(10,4));
+        System.out.println(subtraction(10,4));
+        System.out.println(multiplication(10,4));
+        System.out.println(division(17,0));
+        System.out.println(modulus(10,4));
 
 //        getInteger(input);
 //        factorial(input);
 //        diceRoller(input);
 //        HighLow(input);
 
-    }
+//    }
 
 
 

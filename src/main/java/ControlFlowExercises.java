@@ -88,11 +88,11 @@ public class ControlFlowExercises {
 //        }
 
 
-//        int i = 0, n = 100;
-//        do {
-//            System.out.println(i);
-//            i += 2;
-//        } while(i <= n);
+        int i = 0, n = 100;
+        do {
+            System.out.println(i);
+            i += 2;
+        } while(i <= n);
 
 //        int i = 100, n = -10;
 //        do {
