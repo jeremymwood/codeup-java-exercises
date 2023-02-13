@@ -132,6 +132,7 @@ public class MethodsExercises {
 
     public static int getInteger(int min, int max) {
         Scanner sc = new Scanner(System.in);
+
         System.out.printf("Enter number between %s and %s: ", min, max);
         int userNum = sc.nextInt();
         if(userNum >= min && userNum <= max) {
