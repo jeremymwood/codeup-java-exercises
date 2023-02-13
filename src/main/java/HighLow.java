@@ -15,5 +15,8 @@ public class HighLow {
             }
         } while (userInput != myNumber);
         System.out.println("Game over.");
+
+        //todo
+        //add number of guesses
     }
 }
