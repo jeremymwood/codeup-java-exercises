@@ -1,69 +1,31 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Person {
+    private String name;
 
-    public static int personCounter = 0;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-
-    public Person(String firstName, String middleName, String lastName) {
-        Person.personCounter++;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.lastName = lastName;
+    public String getName(){
+        return name;
     }
 
-    //constructors
-
-    public Person(String firstName) {
-        this("-first-", "-middle-", "-last-");
-        //        Person.personCounter++;
-//        this.firstName = "(first)";
-//        middleName = "(middle)";
-//        lastName = "(last)";
+    public void setName(String name){
+        this.name = name;
     }
-
+//    public void sayHello(){
+//        System.out.printf("Hello from %s.", name);
+//    }
 
     public String sayHello() {
-        return String.format("Hello from %s %s %s. \nPerson counter: %s\n", firstName, middleName, lastName, personCounter);
+        return String.format("Hello from %s.", name);
+    }
+
+    public Person(String name) {
+        this.name = name;
     }
 
     public static void main(String[] args) {
-//        Person rick = new Person();
-//        rick.firstName = "Rick";
-//        rick.middleName = "Daniel";
-//        rick.lastName = "Sanchez";
-//        System.out.println(rick.sayHello());
-//
-//        Person sue = new Person();
-//        sue.firstName = "Sue";
-//        sue.lastName = "Smith";
-//        System.out.println(sue.sayHello());
+        Person jeremy = new Person("Jeremy");
+        System.out.println(jeremy.sayHello());
     }
 
-    //accessors: go at bottom
 
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
