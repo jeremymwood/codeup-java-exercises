@@ -135,7 +135,7 @@ public class MethodsExercises {
         System.out.printf("Enter number between %s and %s: ", min, max);
         int userNum = sc.nextInt();
         if(userNum >= min && userNum <= max) {
-            System.out.printf("huzzah! %s is in range:)", userNum);
+//            System.out.printf("huzzah! %s is in range:)", userNum);
             return userNum;
         }
         System.out.printf("%s is out of range, try again:/\n", userNum);
@@ -216,33 +216,35 @@ public class MethodsExercises {
 //        } while (userRes.equalsIgnoreCase("y"));
 //    }
 
-    public static int HighLow(Scanner input) {
-        System.out.print("Guess my number: ");
-        int aNumber = input.nextInt();
-        int min = 1;
-        int max = 100;
-        if(aNumber < min || aNumber > max) {
-            return HighLow(input);
-        }
-        int result = (int) (Math.random() * max) + min;
+//    public static int HighLow(Scanner input) {
+//        System.out.print("Guess my number: ");
+//        int aNumber = input.nextInt();
+//        int min = 1;
+//        int max = 100;
+//        if(aNumber < min || aNumber > max) {
+//            return HighLow(input);
+//        }
+//        int result = (int) (Math.random() * max) + min;
+//
+//        if (aNumber > result) {
+//            System.out.println("LOWER");
+//            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+//            return aNumber;
+//        }
+//        if (aNumber < result) {
+//            System.out.println("HIGHER");
+//            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+//            return aNumber;
+//        }
+//        if (aNumber == result) {
+//            System.out.println("GOOD GUESS RAINMAN!");
+//            System.out.printf("Result: %s, Guess: %s", result, aNumber);
+//            return aNumber;
+//        }
+//        return aNumber;
+//    }
 
-        if (aNumber > result) {
-            System.out.println("LOWER");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        if (aNumber < result) {
-            System.out.println("HIGHER");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        if (aNumber == result) {
-            System.out.println("GOOD GUESS RAINMAN!");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        return aNumber;
-    }
+
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -258,6 +260,6 @@ public class MethodsExercises {
 //        factorial(2);
 //        factorialRecursion(input);
 //        diceRoller(input);
-        HighLow(input);
+//        HighLow();
     }
 }
