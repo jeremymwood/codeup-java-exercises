@@ -8,11 +8,11 @@ public class MethodsExercises {
 //    public static String sayHello(String name) {
 //        return String.format("Hello, %s!", name);
 //    }
-
+//
 //    public static String sayHello() {
 //        return String.format("Hello there!");
 //    }
-
+//
 //    public static String sayHello(int numRepeats) {
 //        String str = "";
 //        for (int i = 0; i < numRepeats; i++) {
@@ -79,56 +79,33 @@ public class MethodsExercises {
 //        return aNumber;
 //    }
 
+
+
+//   public class FibonacciRecursive {
+//    /*
+//    f(n) = f(n-1) + f(n-2)
+//     */
 //    public static long fib(int n) {
-//        long fibN = 0;
-//        long nMinus1 = 1;
-//        long nMinus2 = 0;
-//
 //        if(n == 0) {
 //            return 0;
 //        }
 //        if(n == 1) {
 //            return 1;
 //        }
-//
-//        for(int i = 2; i <= n; i++) {
-//            fibN = nMinus1 + nMinus2;
-//            nMinus2 = nMinus1;
-//            nMinus1 = fibN;
-//        }
-//        return fibN;
+//        return fib(n - 1) + fib(n - 2);
 //    }
 //
-//    public static long fibOutput(Scanner input) {
-//        System.out.println("how many fibonacci numbers would yo like to plot?");
-//        int n = input.nextInt();
+//    public static void main(String[] args) {
+//        long start = System.currentTimeMillis();
+//        System.out.println(fib(50));
 //
-//        long fibN = 0;
-//        long nMinus1 = 1;
-//        long nMinus2 = 0;
-//        String fibOutput = "";
-//
-////            if(n == 0) {
-////                System.out.println("0, ");
-////                return 0;
-////            }
-////            if(n == 1) {
-////                System.out.println("1, ");
-////                return 1;
-////            }
-//
-//        for(int i = 2; i <= n; i++) {
-////            fibOutput = fibN.toString();
-//            fibN = nMinus1 + nMinus2;
-//            nMinus2 = nMinus1;
-//            nMinus1 = fibN;
-//        }
-//
-////        System.out.printf("%s.", fibN);
-//        return fibN;
+//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
 //    }
+//}
 
-
+//
+//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
+//    }
 
     public static int addition(int num1, int num2) {
         System.out.printf("addition: %s + %s = ", num1, num2);
@@ -152,14 +129,25 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
-    public static int getInteger(Scanner input) {
-    System.out.print("Enter number from 1 to 10: ");
-    int aNumber = input.nextInt();
-    if(aNumber < 1 || aNumber > 10) {
-        return getInteger(input);
-    }
-    System.out.printf("huzzah! %s is a decad number!", aNumber);
-    return aNumber;
+//    public static int getInteger(Scanner input) {
+//        System.out.print("Enter number from 1 to 10: ");
+//        int aNumber = input.nextInt();
+//        if(aNumber < 1 || aNumber > 10) {
+//            return getInteger(input);
+//        }
+//        System.out.printf("huzzah! %s is a decad number!", aNumber);
+//        return aNumber;
+//    }
+    public static int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("Enter number between %s and %s: ", min, max);
+        int userNum = sc.nextInt();
+        if(userNum >= min && userNum <= max) {
+            System.out.printf("huzzah! %s is in range:)", userNum);
+            return userNum;
+        }
+        System.out.printf("%s is out of range, try again:/\n", userNum);
+        return getInteger(min, max);
     }
 
     public static int factorial(Scanner input) {
@@ -170,13 +158,12 @@ public class MethodsExercises {
             return factorial(input);
         }
         for (int i = 1; i <= aNumber; i++) {
-             factorialNum *= i;
+            factorialNum *= i;
         }
 //            return factorialNum;
         System.out.printf("The factorial of %s is: %s", aNumber, factorialNum);
         return aNumber;
     }
-
 
     public static int diceRoller(Scanner input) {
         System.out.print("Enter the number of sides for your pair of dice: ");
@@ -191,44 +178,8 @@ public class MethodsExercises {
         return aNumber;
     }
 
-    public static int HighLow(Scanner input) {
-        System.out.print("Guess my number: ");
-        int aNumber = input.nextInt();
-        int min = 1;
-        int max = 100;
-        if(aNumber < min || aNumber > max) {
-            return HighLow(input);
-        }
-        int result = (int) (Math.random() * max) + min;
-
-        if (aNumber > result) {
-            System.out.println("LOWER");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        if (aNumber < result) {
-            System.out.println("HIGHER");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        if (aNumber == result) {
-            System.out.println("GOOD GUESS RAINMAN!");
-            System.out.printf("Result: %s, Guess: %s", result, aNumber);
-            return aNumber;
-        }
-        return aNumber;
-    }
-
-
-//    public static void main(String[] args) {
-//        Scanner input = new Scanner(System.in);
-
-//        long start = System.currentTimeMillis();
-//        System.out.println(fib(200000));
-
-//        System.out.println("Time in ms = " + (System.currentTimeMillis() - start));
-//        System.out.println(fibOutput(input));
-
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
         System.out.println(addition(10,4));
         System.out.println(subtraction(10,4));
@@ -236,18 +187,8 @@ public class MethodsExercises {
         System.out.println(division(17,0));
         System.out.println(modulus(10,4));
 
-//        getInteger(input);
+        getInteger(1,10);
 //        factorial(input);
 //        diceRoller(input);
-//        HighLow(input);
-
-//    }
-
-
-
-
-
+    }
 }
-
-
-
