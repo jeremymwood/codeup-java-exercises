@@ -1,3 +1,4 @@
+import java.nio.file.LinkPermission;
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -129,15 +130,6 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
-//    public static int getInteger(Scanner input) {
-//        System.out.print("Enter number from 1 to 10: ");
-//        int aNumber = input.nextInt();
-//        if(aNumber < 1 || aNumber > 10) {
-//            return getInteger(input);
-//        }
-//        System.out.printf("huzzah! %s is a decad number!", aNumber);
-//        return aNumber;
-//    }
     public static int getInteger(int min, int max) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter number between %s and %s: ", min, max);
@@ -161,12 +153,32 @@ public class MethodsExercises {
             factorialNum *= i;
         }
 //            return factorialNum;
-        System.out.printf("The factorial of %s is: %s", aNumber, factorialNum);
+        System.out.printf("The factorial of %s is: %s\n", aNumber, factorialNum);
         return aNumber;
     }
 
+    //lola
+//    public static int factorial() {
+//        Scanner input = new Scanner(System.in);
+//        int answer = 1;
+////        System.out.print("Enter number: ");
+//        for (int i = 1; i <= input; i++) {
+//            answer *= i;
+//        }
+//        System.out.printf("The factorial of %s is: %s", input, answer);
+//        return answer;
+//    }
+
+    //lola... not working
+//    public static long factorialRecursion(int num) {
+//        if (num == 1) {
+//            return  1;
+//        }
+//        return factorialRecursion(num - 1) * num;
+//    }
+
     public static int diceRoller(Scanner input) {
-        System.out.print("Enter the number of sides for your pair of dice: ");
+        System.out.println("Enter the number of sides for your pair of dice: ");
         int aNumber = input.nextInt();
         int min = 1;
         int max = aNumber;
@@ -178,17 +190,45 @@ public class MethodsExercises {
         return aNumber;
     }
 
+    //lola
+//    public static  int dice(int n) {
+//        double diceroll = Math.floor(Math.random() * n + 1);
+//        int intRoll = (int)diceroll;
+//        return intRoll;
+//
+//    }
+
+    //lola... should work in main
+//    public static int diceRoller(Scanner input) {
+//        System.out.println("Welcome to dice roller 1.0");
+//        String userRes;
+//        do {
+//            System.out.println("Enter the number of sides for your pair of dice: ");
+//            int userInput = input.nextInt();
+//            System.out.println("Roll the dice? (y/n)");
+//            String userChoice = input.next();
+//            if (userChoice.equalsIgnoreCase("y")) {
+//                System.out.printf("First result is: ", dice(userInput));
+//                System.out.printf("Second result is: ", dice(userInput));
+//            }
+//            System.out.println("Continue? (y/n)");
+//            userRes = input.next();
+//        } while (userRes.equalsIgnoreCase("y"));
+//    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println(addition(10,4));
-        System.out.println(subtraction(10,4));
-        System.out.println(multiplication(10,4));
-        System.out.println(division(17,0));
-        System.out.println(modulus(10,4));
+//        System.out.println(addition(10,4));
+//        System.out.println(subtraction(10,4));
+//        System.out.println(multiplication(10,4));
+//        System.out.println(division(17,0));
+//        System.out.println(modulus(10,4));
 
-        getInteger(1,10);
-//        factorial(input);
-//        diceRoller(input);
+//        getInteger(1,10);
+        factorial(input);
+//        factorial(2);
+//        factorialRecursion(input);
+        diceRoller(input);
     }
 }
