@@ -1,4 +1,5 @@
 import playtime.Fighter;
+import playtime.Weapon;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -6,25 +7,25 @@ import java.util.Scanner;
 
 public class ArraysExercises {
 
-
-//    public static String[] addX(int n, String[] arr, String x)
-//    {
-//        int i;
-//
-//        // create a new array of size n+1
-//        String[] newarr = new String[n + 1];
-//
-//        // insert the elements from
-//        // the old array into the new array
-//        // insert all elements till n
-//        // then insert x at n+1
-//        for (i = 0; i < n; i++)
-//            newarr[i] = arr[i];
-//
-//        newarr[n] = x;
-//
-//        return newarr;
+    private String name;
+//    public Person(String name) {
+//        this.name = name;
 //    }
+//    @Override
+//    public String toString() {
+//        return "ArraysExercises{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+
     public static String[] addPerson(String personName, int n, String arr[]) {
         int i;
         String newArr[] = new String[n + 1];
@@ -54,6 +55,7 @@ public class ArraysExercises {
 //        for (int i = 0; i < Person.length; i++) {
 //        System.out.println(Person[i]);
 //    }
+
 
     public static void main(String[] args) {
 //        int [] ages;
@@ -149,21 +151,16 @@ public class ArraysExercises {
 
         //ex1 copy of method
 
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(numbers);
+//        int[] numbers = {1, 2, 3, 4, 5};
+//        System.out.println(numbers);
 
-//        Person[] people = new Person[3];
-//        Person matthew = new Person("Matthew");
-//        Person rosie = new Person("Rosie");
-//        Person nikki = new Person("Nikki");
-        int n = 3;
-        String[] Person = {"Matthew", "Rosie", "Nikki"};
+
+        String[] people = {"Matthew", "Rosie", "Nikki", "Jeremy"};
+        int n = people.length;
         String personName = "Kenzi";
 //        String personName = "Jeremy";
-        Person = addPerson(personName, n, Person);
-
-//        System.out.println(Arrays.toString(Person));
-        String[] newArr = addPerson(personName, n, Person);
+//        Person kenzi = new Person("Kenzi");
+        String[] newArr = addPerson(personName, n, people);
         System.out.println(Arrays.toString(newArr));
 
 
