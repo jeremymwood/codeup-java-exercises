@@ -129,6 +129,10 @@ public class MethodsExercises {
         System.out.printf("modulus: %s / %s = ", num1, num2);
         return num1 % num2;
     }
+    public static int special(int num1, int num2, int num3) {
+        System.out.printf("special:", num1, num2, num3);
+        return (num1 * num2) % num3;
+    }
 
     public static int getInteger(int min, int max) {
         Scanner sc = new Scanner(System.in);
@@ -225,6 +229,7 @@ public class MethodsExercises {
 //        System.out.println(multiplication(10,4));
 //        System.out.println(division(17,0));
 //        System.out.println(modulus(10,4));
+        System.out.println(special(5, 4, 3));
 
 //        getInteger(1,10);
 //        factorial(input);
