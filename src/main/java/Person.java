@@ -8,9 +8,6 @@ public class Person {
     public void setName(String name){
         this.name = name;
     }
-//    public void sayHello(){
-//        System.out.printf("Hello from %s.", name);
-//    }
 
     public String sayHello() {
         return String.format("Hello from %s.", name);
