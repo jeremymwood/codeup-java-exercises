@@ -2,13 +2,9 @@ package playtime;
 
 public class Fighter {
     private int health;
-
     private String name;
-
     private int strength;
-
     private Weapon currentWeapon;
-
     public Fighter(String name) {
         this.name = name;
         health = 100;
@@ -20,6 +16,16 @@ public class Fighter {
         int otherHealth = otherFighter.getHealth();
         otherHealth -= (strength + currentWeapon.getDamage());
         otherFighter.setHealth(otherHealth);
+    }
+
+    @Override
+    public String toString() {
+        return "Fighter{" +
+                "health=" + health +
+                ", name='" + name + '\'' +
+                ", strength=" + strength +
+                ", currentWeapon=" + currentWeapon +
+                '}';
     }
 
     // accessors
