@@ -18,7 +18,7 @@ public class Arena {
         System.out.println("Fight!");
         System.out.printf("Ragnar's health: %d%n", ragnar.getHealth());
         //i want to print the current weapons too
-        //        System.out.printf("Ragnar's weapon: %d%n", ragnar.getCurrentWeapon());
+//        System.out.printf("Ragnar's weapon: %d%n", ragnar.getCurrentWeapon());
         System.out.printf("Bob's health: %d%n%n", bob.getHealth());
 
         System.out.println("*Bob hits Ragnar*");

@@ -9,8 +9,15 @@ public class Weapon {
         this.damage = damage;
     }
 
+    @Override
+    public String toString() {
+        return "Weapon{" +
+                "name='" + name + '\'' +
+                ", damage=" + damage +
+                '}';
+    }
 
-    // accessors
+// accessors
 
     public String getName() {
         return name;

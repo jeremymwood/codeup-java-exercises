@@ -9,6 +9,7 @@ public class Fighter {
         this.name = name;
         health = 100;
         strength = 10;
+        currentWeapon = getCurrentWeapon();
     }
 
     // the fighter this is called on hits the otherFighter
@@ -58,7 +59,10 @@ public class Fighter {
         return currentWeapon;
     }
 
+
     public void setCurrentWeapon(Weapon currentWeapon) {
         this.currentWeapon = currentWeapon;
     }
+
+
 }
