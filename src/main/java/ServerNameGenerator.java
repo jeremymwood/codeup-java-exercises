@@ -1,8 +1,6 @@
 import java.util.Arrays;
 
 public class ServerNameGenerator {
-
-
     public static void main(String[] args) {
     String[] adjectives = {"odd", "comprehensive", "shrill", "simplistic", "healthy", "obese", "square", "kaput", "fluffy", "squealing"};
 
