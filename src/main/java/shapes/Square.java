@@ -5,14 +5,14 @@ package shapes;
 //    private int side;
 //
 ////    public Square(int side) {
-//////        super(width);
-//////        super(height);
-////    }
-//
-////    public Square(String name, int side) {
-////        super(name);
-//////        return Rectangle(name, side, side);
+////        this.side = super(width);
+////        this.side = super(height);
 ////    }
 //
 //
+////    public Square(int side) {
+////        super(width) = side;
+////        super(height) = side;
+//////        super(width, height);
+////    }
 //}

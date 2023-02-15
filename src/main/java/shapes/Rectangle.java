@@ -12,13 +12,13 @@ public class Rectangle {
 
     public static int getArea(int width, int height) {
         int area = width * height;
-        System.out.printf("width: %s\nheight: %s\narea: %s\n\n", width, height, area);
+        System.out.printf("area: %s\n",area);
         return area;
     }
 
     public static int getPerimeter(int width, int height) {
         int perimeter = 2 * (width + height);
-        System.out.printf("width: %s\nheight: %s\nperimeter: %s\n\n", width, height, perimeter);
+        System.out.printf("perimeter: %s\n\n",perimeter);
         return perimeter;
     }
 
