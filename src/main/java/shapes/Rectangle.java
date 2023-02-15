@@ -10,13 +10,13 @@ public class Rectangle {
         this.height = height;
     }
 
-    public static int getArea(int width, int height) {
+    public void int getArea(int width, int height) {
         int area = width * height;
         System.out.printf("area: %s\n",area);
         return area;
     }
 
-    public static int getPerimeter(int width, int height) {
+    public void int getPerimeter(int width, int height) {
         int perimeter = 2 * (width + height);
         System.out.printf("perimeter: %s\n\n",perimeter);
         return perimeter;
