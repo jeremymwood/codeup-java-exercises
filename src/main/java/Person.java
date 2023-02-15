@@ -1,45 +1,55 @@
 public class Person {
     private String name;
-    private String age;
-    private String placeOfBirth;
+//    private String age;
+//    private String placeOfBirth;
 
     public String sayHello() {
-        return String.format("Hello from %s. %s years old, from %s", name, age, placeOfBirth);
+        return String.format("Hello from %s. %s years old, from %s", name);
     }
     public String getName(){
         return name;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public void setName(String name){
         this.name = name;
     }
-    public String getAge() {
-        return age;
-    }
-     public void setAge(String age) {
-        this.age = age;
-    }
-    public String getPlaceOfBirth() {
-        return placeOfBirth;
-    }
-    public void setPlaceOfBirth(String placeOfBirth) {
-        this.placeOfBirth = placeOfBirth;
-    }
-
-    public Person(String name, String age, String placeOfBirth) {
-        this.name = name;
-        this.age = age;
-        this.placeOfBirth = placeOfBirth;
-    }
+//    public String getAge() {
+//        return age;
+//    }
+//     public void setAge(String age) {
+//        this.age = age;
+//    }
+//    public String getPlaceOfBirth() {
+//        return placeOfBirth;
+//    }
+//    public void setPlaceOfBirth(String placeOfBirth) {
+//        this.placeOfBirth = placeOfBirth;
+//    }
 
     public Person(String name) {
         this.name = name;
-        this.age = "(age)";
-        this.placeOfBirth = "(placeOfBirth)";
+//        this.age = age;
+//        this.placeOfBirth = placeOfBirth;
     }
 
+//    public Person(String name) {
+//        this.name = name;
+//        this.age = "(age)";
+//        this.placeOfBirth = "(placeOfBirth)";
+//    }
+
+
+
+
     public static void main(String[] args) {
-        Person jeremy = new Person("Jeremy", "36", "Brownsville");
+        Person jeremy = new Person("Jeremy");
         System.out.println(jeremy.sayHello());
 
 //        Person person1 = new Person("John");

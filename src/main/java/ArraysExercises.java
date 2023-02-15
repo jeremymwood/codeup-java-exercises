@@ -57,6 +57,7 @@ public class ArraysExercises {
 //    }
 
 
+
     public static void main(String[] args) {
 //        int [] ages;
 //
@@ -155,15 +156,21 @@ public class ArraysExercises {
 //        System.out.println(numbers);
 
 
-        String[] people = {"Matthew", "Rosie", "Nikki", "Jeremy"};
-        int n = people.length;
-        String personName = "Kenzi";
-//        String personName = "Jeremy";
-//        Person kenzi = new Person("Kenzi");
-        String[] newArr = addPerson(personName, n, people);
-        System.out.println(Arrays.toString(newArr));
+//        String[] people = {"Matthew", "Rosie", "Nikki", "Jeremy"};
+//        int n = people.length;
+//        String personName = "Kenzi";
+////        String personName = "Jeremy";
+////        Person kenzi = new Person("Kenzi");
+//        String[] newArr = addPerson(personName, n, people);
+//        System.out.println(Arrays.toString(newArr));
 
-//
+
+        Person [] people = new Person[3];
+        System.out.println(Arrays.toString(people));
+        people[0] = new Person("Matthew");
+        people[1] = new Person("Rosie");
+        people[2] = new Person("Nikki");
+        System.out.println(Arrays.toString(people));
 
 
 
