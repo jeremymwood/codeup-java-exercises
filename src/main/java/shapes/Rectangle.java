@@ -8,7 +8,7 @@ public class Rectangle {
     public Rectangle(int width, int height) {
         this.width = width;
         this.height = height;
-    };
+    }
 
     public static int getArea(int width, int height) {
         int area = width * height;

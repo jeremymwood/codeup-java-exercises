@@ -1,18 +1,16 @@
 package shapes;
 
-//public class Square extends Rectangle {
-//
-//    private int side;
-//
-////    public Square(int side) {
-////        this.side = super(width);
-////        this.side = super(height);
-////    }
-//
-//
-////    public Square(int side) {
-////        super(width) = side;
-////        super(height) = side;
-//////        super(width, height);
-////    }
-//}
+public class Square extends Rectangle {
+
+    private int side;
+    private int side2;
+
+//    public Square(int side) {
+//        this.side = side;
+//    }
+//    @Override
+    public Square(int side) {
+        super(side, side);
+        this.side = side;
+    }
+}
