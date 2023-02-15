@@ -2,10 +2,9 @@ import playtime.Fighter;
 import playtime.Ninja;
 import playtime.Weapon;
 
-
 public class polyLec {
 
-
+//polymorphism is expressed with inheritance, interface and abstract references.
 
     public static void main(String[] args) {
         Fighter bob = new Fighter("Bob");
