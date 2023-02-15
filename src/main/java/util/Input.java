@@ -25,24 +25,38 @@ public class Input {
         }
     }
 
-    public static int getInt(int min, int max) {
-        System.out.printf("Enter number between %s and %s: ", min, max);
-        int userNum = scanner.nextInt();
-        if (userNum >= min && userNum <= max) {
-                System.out.printf("huzzah! %s is in range:)", userNum);
-                return userNum;
-            } else {
-            System.out.printf("%s is out of range, try again:/\n", userNum);
-            return getInt(min, max);
-            }
-    }
+//    public static int getInt(int min, int max) {
+//        System.out.printf("Enter number between %s and %s: ", min, max);
+//        int userNum = scanner.nextInt();
+//        if (userNum >= min && userNum <= max) {
+//                System.out.printf("huzzah! %s is in range:)", userNum);
+//                return userNum;
+//            } else {
+//            System.out.printf("%s is out of range, try again:/\n", userNum);
+//            return getInt(min, max);
+//            }
+//    }
 
     public static int getInt(){
-        System.out.print("Enter a number: ");
-        int userNum = scanner.nextInt();
-        System.out.printf("huzzah! your int is %s.)", userNum);
-        return userNum;
+//        System.out.print("Enter a number: ");
+//        int userNum = scanner.nextInt();
+//        System.out.printf("huzzah! your int is %s.)", userNum);
+//        return userNum;
+        return scanner.nextInt();
     }
+    public int getInt(int min, int max, String string){
+        System.out.println("choose a number between " + min + " and " + max);
+        int myNumber = getInt();
+        if (myNumber >= min && myNumber <= max) {
+            System.out.println("good job");
+//            return myNumber;
+        } else {
+            return getInt(min, max, "try again");
+        }
+        return myNumber;
+    }
+
+
 
     public static double getDouble(double min, double max) {
         System.out.printf("Enter number between %s and %s: ", min, max);
