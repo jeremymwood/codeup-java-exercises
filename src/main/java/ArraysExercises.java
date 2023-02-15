@@ -165,23 +165,27 @@ public class ArraysExercises {
 //        System.out.println(Arrays.toString(newArr));
 
 
-        Person [] people = new Person[3];
-        System.out.println(Arrays.toString(people));
-        people[0] = new Person("Matthew");
-        people[1] = new Person("Rosie");
-        people[2] = new Person("Nikki");
-        System.out.println(Arrays.toString(people));
+//        Person [] people = new Person[3];
+//        System.out.println(Arrays.toString(people));
+//        people[0] = new Person("Matthew");
+//        people[1] = new Person("Rosie");
+//        people[2] = new Person("Nikki");
+//        System.out.println(Arrays.toString(people));
+//
+//        for (Person person : people) {
+//            System.out.println(person);
+//        }
+//
+//        people = addPerson(people, new Person("Lou"));
+//        System.out.println(Arrays.toString(people));
+//
 
-
-
-
-        //ex2
-
-
-
-
-
-
+        //probably have something wrong in Person class
+//        public static Person[] addPerson(Person [] people, Person newPerson) {
+//            Person [] newArray = Arrays.copyOf(people, people.length + 1);
+//            newArray[newArray.length - 1] = newPerson;
+//            return newArray;
+//        }
 
     }
 }
