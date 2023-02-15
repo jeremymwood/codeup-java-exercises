@@ -5,11 +5,18 @@ import java.util.Scanner;
 public class Input {
     private static Scanner scanner = new Scanner(System.in);
 
+    public static String getString(String string){
+//        System.out.print("Enter a number: ");
+//        int userNum = scanner.nextInt();
+//        System.out.printf("huzzah! your int is %s.)", userNum);
+//        return userNum;
+        return scanner.nextLine();
+    }
 
     public static String getString(){
-        System.out.print("enter a string:");
+//        System.out.print("enter a string:");
         String string = scanner.nextLine();
-        System.out.printf("your string: %s\n", string);
+//        System.out.printf("your string: %s\n", string);
         return string;
     }
 

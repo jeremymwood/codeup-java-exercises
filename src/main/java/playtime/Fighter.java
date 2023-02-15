@@ -9,7 +9,11 @@ public class Fighter {
         this.name = name;
         health = 100;
         strength = 10;
-        currentWeapon = getCurrentWeapon();
+    }
+
+    public Fighter(String name, int strength) {
+        this.name = name;
+        this.strength = strength;
     }
 
     // the fighter this is called on hits the otherFighter
@@ -17,6 +21,10 @@ public class Fighter {
         int otherHealth = otherFighter.getHealth();
         otherHealth -= (strength + currentWeapon.getDamage());
         otherFighter.setHealth(otherHealth);
+    }
+
+    public void taunt() {
+        System.out.printf("%s: Puny mortal!\n", name);
     }
 
     @Override
