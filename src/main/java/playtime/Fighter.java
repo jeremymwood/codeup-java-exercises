@@ -1,13 +1,14 @@
 package playtime;
 
 public class Fighter {
+    private final int MAX_HEALTH = 100;
     private int health;
     private String name;
-    private int strength;
+    protected int strength;
     private Weapon currentWeapon;
     public Fighter(String name) {
         this.name = name;
-        health = 100;
+        health = MAX_HEALTH;
         strength = 10;
     }
 

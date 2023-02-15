@@ -22,7 +22,27 @@ public class polyLec {
         sue.hit(bob);
         sue.jump();
 
-        System.out.println(bob.getHealth());
-        System.out.println(sue.getHealth());
+        System.out.printf("%s's health: %s\n",bob.getName(), bob.getHealth());
+        System.out.printf("%s's health: %s\n",sue.getName(), sue.getHealth());
+
+        Fighter weirdo = new Ninja("Weirdo");
+
+        Fighter [] combatants = new Fighter[5];
+
+        combatants[0] = weirdo;
+        combatants[1] = bob;
+
+        for (Fighter combatant : combatants) {
+            if (combatant != null) {
+//                combatant.thowShuriken();
+
+                if (combatant instanceof Ninja) {
+                    System.out.printf("oooo, %s is a ninja!\n", combatant.getName());
+                } else {
+                    System.out.printf("Meh, %s is just a fighter\n", combatant.getName());
+                }
+            }
+        }
+
     }
 }

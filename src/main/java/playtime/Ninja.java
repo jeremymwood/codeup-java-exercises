@@ -10,9 +10,15 @@ public class Ninja extends Fighter{
         numShurikens = 1;
     }
 
+
     public void jump() {
         System.out.printf("The ninja, %s, jumps!\n", getName());
     }
+
+    //some new method
+//    public void thowShuriken()  {
+//
+//    }
 
     @Override
     public void taunt() {
