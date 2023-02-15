@@ -44,6 +44,25 @@ public class Input {
         return userNum;
     }
 
+    public static double getDouble(double min, double max) {
+        System.out.printf("Enter number between %s and %s: ", min, max);
+        Double userNum = scanner.nextDouble();
+        if (userNum >= min && userNum <= max) {
+            System.out.printf("huzzah! %s is in range:)", userNum);
+            return userNum;
+        } else {
+            System.out.printf("%s is out of range, try again:/\n", userNum);
+            return getDouble(min, max);
+        }
+    }
+
+    public static double getDouble(){
+        System.out.print("Enter a number: ");
+        double userNum = scanner.nextDouble();
+        System.out.printf("huzzah! your double is %s.", userNum);
+        return userNum;
+    }
+
 //            int myNumber = (int) (Math.random() * 100) + 1;
 //            int userInput;
 //
