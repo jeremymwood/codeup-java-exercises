@@ -2,24 +2,36 @@ package shapes;
 
 public class Rectangle {
 
-    protected int width;
-    protected int height;
+    protected double width;
+    protected double length;
 
-    public Rectangle(int width, int height) {
+    public Rectangle(double width, double length) {
         this.width = width;
-        this.height = height;
+        this.length = length;
+    }
+    public double getPerimeter() {
+        return 2 * (width + length);
     }
 
-    public void int getArea(int width, int height) {
-        int area = width * height;
-        System.out.printf("area: %s\n",area);
-        return area;
+    public double getArea() {
+        return width * length;
     }
 
-    public void int getPerimeter(int width, int height) {
-        int perimeter = 2 * (width + height);
-        System.out.printf("perimeter: %s\n\n",perimeter);
-        return perimeter;
+    public double getWidth() {
+        return width;
     }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
 
 }
