@@ -3,15 +3,18 @@ package shapes;
 
 public class ShapesTest {
 
-
     public static void main(String[] args) {
-        Rectangle box1 = new Rectangle(5, 4);
-        System.out.printf("Area: %s, Perimeter: %s\n", box1.getArea(), box1.getPerimeter());
+        Measurable myShape1 = new Rectangle(4, 5);
+        System.out.printf("""
+                Area: %s, Perimeter: %s
+                
+                """, myShape1.getArea(), myShape1.getPerimeter());
 
-        Rectangle box2 = new Square(5);
-        System.out.printf("Area: %s, Perimeter: %s\n", box2.getArea(), box2.getPerimeter());
+        Measurable myShape2 = new Square(6);
+        System.out.printf("""
+                Area: %s, Perimeter: %s
+                
+                """, myShape2.getArea(), myShape2.getPerimeter());
 
     }
-
-
 }
