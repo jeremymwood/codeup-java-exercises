@@ -55,7 +55,7 @@ public class Input {
 //        System.out.println("choose a number between " + min + " and " + max);
         int myNumber = getInt();
         if (myNumber >= min && myNumber <= max) {
-            System.out.println("good job");
+//            System.out.println("good job");
 //            return myNumber;
         } else {
             return getInt(min, max, "try again");

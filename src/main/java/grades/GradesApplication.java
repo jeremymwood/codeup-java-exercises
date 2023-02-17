@@ -37,64 +37,67 @@ public class GradesApplication {
         students.put("olivia", olivia);
         students.put("elliot", elliot);
 
-//        System.out.println(students);
-//        System.out.println();
-
         Set<String> keys = students.keySet();
 
-        for (String key : keys) {
-            Student aStudent = students.get(key);
-            System.out.printf("""
-                    Student: %s
-                    Grades:  %s
-                    Average: %s
+//        for (String key : keys) {
+//            Student aStudent = students.get(key);
+//            System.out.printf("""
+//                    Student: %s
+//                    Grades:  %s
+//                    Average: %s
+//
+//                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+//        }
 
-                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+        while(true) {
+            printMenu();
+            int choice = input.getInt(0, 4, "Enter your choice: ");
+            doChoice(choice);
+            if(choice == 0) {
+                break;
+            }
         }
 
-//        while(true) {
-//            printMenu();
-//            int choice = input.getInt(0, 4, "Enter your choice: ");
-//            doChoice(choice);
-//            if(choice == 0) {
-//                break;
-//            }
-//        }
-//
-//        System.out.println("Bye");
-//
-//    }
+        System.out.println("Bye");
+
+    }
 
 
-//    private static void printMenu() {
-//        System.out.println("""
-//                What would you like to do?
-//
-//                0 - exit
-//                1 - view Jeremy's grades
-//                2 - view Kenzi's grades
-//                3 - view Olivia's grades
-//                4 - view Elliot's grades
-//
-//                Enter your choice:
-//                """);
-//    }
+    private static void printMenu() {
+        System.out.println("""
+                Welcome!
+                                
+                Here are the GitHub usernames of our students:
+                                
+                | Jeremy |   | Kenzi |   | Olivia |   | Elliot |
+                
+                What would you like to do?
 
-//    private static void doChoice(int choice) {
-//        switch (choice) {
-//            case 1:
+                0: Exit
+                1: Print student info
+                2: View all the grades
+                3: Overall class average
+                4: Print CSV report
+
+                Enter your choice:
+                """);
+    }
+
+    private static void doChoice(int choice) {
+        switch (choice) {
+            case 1:
 //                viewAllStudents();
-//            case 2:
-//                viewStudentsByName("Jeremy");
-//            case 3:
-//                viewStudentsByName("Kenzi");
-//            case 4:
-//                viewStudentsByName("Olivia");
-//            case 5:
-//                viewStudentsByName("Elliot");
-//                break;
-//        }
-//    }
+            case 2:
+                viewStudentsByName("Jeremy");
+            case 3:
+                viewStudentsByName("Kenzi");
+            case 4:
+                viewStudentsByName("Olivia");
+            case 5:
+                viewStudentsByName("Elliot");
+                break;
+        }
+    }
 
 //    private static void viewAllStudents() {
 //        for (String key : keys) {
@@ -112,13 +115,13 @@ public class GradesApplication {
 ////        }
 //        System.out.println();
 //    }
-//
-//    private static void viewStudentsByName(String string) {
-//        for (Student student : students) {
-//            if (student.getName().equals(student)) {
-//                System.out.println(student);
-//            }
-//        }
-//        System.out.println();
+
+    private static void viewStudentsByName(String string) {
+        for (Student student : students) {
+            if (student.getName().equals(student)) {
+                System.out.println(student);
+            }
+        }
+        System.out.println();
     }
 }
