@@ -2,13 +2,27 @@ package playtime;
 
 public class Fighter {
     private final int MAX_HEALTH = 100;
+
     private int health;
+
     private String name;
+
     protected int strength;
+
+//    private String weaponName;
+//    private int weaponDamage;
+
     private Weapon currentWeapon;
+
+    public Fighter() {
+        this.name = "Unknown fighter";
+        health = MAX_HEALTH;
+        strength = 10;
+    }
+
     public Fighter(String name) {
         this.name = name;
-        health = MAX_HEALTH;
+        health = 100;
         strength = 10;
     }
 
@@ -19,13 +33,14 @@ public class Fighter {
 
     // the fighter this is called on hits the otherFighter
     public void hit(Fighter otherFighter) {
+        //  + currentWeapon.getDamage())
         int otherHealth = otherFighter.getHealth();
-        otherHealth -= (strength + currentWeapon.getDamage());
+        otherHealth -= strength;
         otherFighter.setHealth(otherHealth);
     }
 
     public void taunt() {
-        System.out.printf("%s: Puny mortal!\n", name);
+        System.out.println("Your mama wears combat boots!");
     }
 
     @Override
@@ -68,10 +83,7 @@ public class Fighter {
         return currentWeapon;
     }
 
-
     public void setCurrentWeapon(Weapon currentWeapon) {
         this.currentWeapon = currentWeapon;
     }
-
-
 }
