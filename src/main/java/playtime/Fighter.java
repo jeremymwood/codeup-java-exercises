@@ -14,6 +14,7 @@ public class Fighter {
         this.name = name;
         health = MAX_HEALTH;
         strength = 10;
+        currentWeapon = new Weapon("Broom", 1);
         weapons = new ArrayList<>();
     }
 
@@ -47,7 +48,8 @@ public class Fighter {
                 "health=" + health +
                 ", name='" + name + '\'' +
                 ", strength=" + strength +
-                ", currentWeapon=" + currentWeapon +
+                ", currentWeapon=" + currentWeapon.getName() +
+                ", currentWeapon Damage=" + currentWeapon.getDamage() +
                 '}';
     }
 

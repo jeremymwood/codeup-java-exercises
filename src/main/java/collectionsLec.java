@@ -1,10 +1,7 @@
 import playtime.Fighter;
 import playtime.Weapon;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class collectionsLec {
     public static void main(String[] args) {
@@ -84,6 +81,16 @@ public class collectionsLec {
 
         Fighter checkFighter = new Fighter("Knull");
         System.out.println(roster.containsValue(checkFighter));
+
+        roster.put("bob", new Fighter("Bob"));
+        roster.put("sue", new Fighter("Sue"));
+        roster.put("ragnar", new Fighter("Ragnar"));
+        Set<String> keys = roster.keySet();
+
+        for (String key : keys) {
+            Fighter aFighter = roster.get(key);
+            System.out.println(aFighter);
+        }
 
     }
 
