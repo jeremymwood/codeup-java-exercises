@@ -5,13 +5,22 @@ import java.util.ArrayList;
 public class Student {
 
 //    ***properties***
-    static String name;
-    private static ArrayList<Integer> grades;
+    public String name;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grades=" + grades +
+                '}';
+    }
+
+    public ArrayList<Integer> grades;
 
 //    ***methods***
-    public Student(String name, int grade) {
+    public Student(String name) {
         this.name = name;
-        grades = new ArrayList<>();
+        this.grades = new ArrayList<>();
     }
     // returns the student's name
     public String getName() {
@@ -22,7 +31,7 @@ public class Student {
         grades.add(grade);
     };
     // returns the average of the students grades
-    public static double getGradeAverage() {
+    public double getGradeAverage() {
         int gradeSum = 0;
         for (int grade : grades) {
             gradeSum += grade;
