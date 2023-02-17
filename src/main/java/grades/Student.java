@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Student {
 
 //    ***properties***
-    private static String name;
+    static String name;
     private static ArrayList<Integer> grades;
 
 //    ***methods***
@@ -40,28 +40,8 @@ public class Student {
 
 
 
-    public static void main(String[] args) {
-        Student jeremy = new Student("Jeremy", 0);
-        jeremy.addGrade(100);
-        jeremy.addGrade(95);
-        jeremy.addGrade(85);
-        jeremy.addGrade(75);
+//    public static void main(String[] args) {
 
-        System.out.printf("""
-                Student: %s
-                Avg:     %s
-                """, name, getGradeAverage());
-
-        Student kenzi = new Student("Kenzi", 0);
-        kenzi.addGrade(100);
-        kenzi.addGrade(95);
-        kenzi.addGrade(95);
-        kenzi.addGrade(95);
-
-        System.out.printf("""
-                Student: %s
-                Avg:     %s
-                """, name, getGradeAverage());
         
 //        HashMap<String, Student> studentRoster = new HashMap<>();
 
@@ -74,6 +54,6 @@ public class Student {
 
 
 
-    }
+//    }
 
 }
