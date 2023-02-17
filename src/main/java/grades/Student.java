@@ -27,7 +27,6 @@ public class Student {
         for (int grade : grades) {
             gradeSum += grade;
         }
-        System.out.println(gradeSum / grades.size());
         return gradeSum / grades.size();
     };
 
@@ -43,24 +42,26 @@ public class Student {
 
     public static void main(String[] args) {
         Student jeremy = new Student("Jeremy", 0);
-
         jeremy.addGrade(100);
         jeremy.addGrade(95);
         jeremy.addGrade(85);
         jeremy.addGrade(75);
 
+        System.out.printf("""
+                Student: %s
+                Avg:     %s
+                """, name, getGradeAverage());
+
+        Student kenzi = new Student("Kenzi", 0);
+        kenzi.addGrade(100);
+        kenzi.addGrade(95);
+        kenzi.addGrade(95);
+        kenzi.addGrade(95);
 
         System.out.printf("""
                 Student: %s
                 Avg:     %s
                 """, name, getGradeAverage());
-        
-        
-        
-        
-        
-        
-        
         
 //        HashMap<String, Student> studentRoster = new HashMap<>();
 
