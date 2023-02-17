@@ -52,7 +52,7 @@ public class Input {
         return scanner.nextInt();
     }
     public int getInt(int min, int max, String string){
-        System.out.println("choose a number between " + min + " and " + max);
+//        System.out.println("choose a number between " + min + " and " + max);
         int myNumber = getInt();
         if (myNumber >= min && myNumber <= max) {
             System.out.println("good job");

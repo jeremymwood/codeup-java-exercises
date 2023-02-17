@@ -1,6 +1,6 @@
 package grades;
 
-public class TestStudent {
+public class StudentTest {
     public static void main(String[] args) {
 //        Student jeremy = new Student("Jeremy");
 //        jeremy.addGrade(100);
