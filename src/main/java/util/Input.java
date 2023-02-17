@@ -21,7 +21,7 @@ public class Input {
     }
 
     public static boolean yesNo() {
-        System.out.print("enter boolean: ");
+//        System.out.print("enter boolean: ");
         String myBool = scanner.nextLine();
         if (myBool.equalsIgnoreCase("y") || myBool.equalsIgnoreCase("yes") || myBool.equalsIgnoreCase("true")) {
             System.out.printf("your boolean, %s, is true", myBool);
@@ -69,7 +69,7 @@ public class Input {
         System.out.printf("Enter number between %s and %s: ", min, max);
         Double userNum = scanner.nextDouble();
         if (userNum >= min && userNum <= max) {
-            System.out.printf("huzzah! %s is in range:)", userNum);
+//            System.out.printf("huzzah! %s is in range:)", userNum);
             return userNum;
         } else {
             System.out.printf("%s is out of range, try again:/\n", userNum);
@@ -80,7 +80,7 @@ public class Input {
     public static double getDouble(){
         System.out.print("Enter a number: ");
         double userNum = scanner.nextDouble();
-        System.out.printf("huzzah! your double is %s.", userNum);
+//        System.out.printf("huzzah! your double is %s.", userNum);
         return userNum;
     }
 
