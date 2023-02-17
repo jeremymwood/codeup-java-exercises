@@ -10,15 +10,15 @@ public class GradesApplication {
 
     private static Input input = new Input();
 
-    private static Student[] students;
+//    private static Student[] students;
+
+    private static HashMap<String, Student> students;
 
 
     public static void main(String[] args) {
-
-
         Input input = new Input();
 
-        HashMap<String, Student> students = new HashMap<>();
+        students = new HashMap<>();
 
         Student jeremy = new Student("Jeremy");
         jeremy.grades.addAll(Arrays.asList(78, 98, 65));
@@ -32,22 +32,24 @@ public class GradesApplication {
         Student elliot = new Student("Elliot");
         elliot.grades.addAll(Arrays.asList(76, 95, 79));
 
+
         students.put("jeremy", jeremy);
         students.put("kenzi", kenzi);
         students.put("olivia", olivia);
         students.put("elliot", elliot);
+//        System.out.println(students);
 
         Set<String> keys = students.keySet();
 
-//        for (String key : keys) {
-//            Student aStudent = students.get(key);
-//            System.out.printf("""
-//                    Student: %s
-//                    Grades:  %s
-//                    Average: %s
-//
-//                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
-//        }
+        for (String key : keys) {
+            Student aStudent = students.get(key);
+            System.out.printf("""
+                    Student: %s
+                    Grades:  %s
+                    Average: %s
+
+                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+        }
 
         while(true) {
             printMenu();
@@ -66,11 +68,11 @@ public class GradesApplication {
     private static void printMenu() {
         System.out.println("""
                 Welcome!
-                                
+
                 Here are the GitHub usernames of our students:
-                                
+
                 | Jeremy |   | Kenzi |   | Olivia |   | Elliot |
-                
+
                 What would you like to do?
 
                 0: Exit
@@ -86,42 +88,46 @@ public class GradesApplication {
     private static void doChoice(int choice) {
         switch (choice) {
             case 1:
-//                viewAllStudents();
+                viewAllStudents();
             case 2:
-                viewStudentsByName("Jeremy");
+//                viewAllGrades();
             case 3:
-                viewStudentsByName("Kenzi");
+//                overallClassAverage();
             case 4:
-                viewStudentsByName("Olivia");
-            case 5:
-                viewStudentsByName("Elliot");
+//                printCsvReport();
                 break;
         }
     }
 
-//    private static void viewAllStudents() {
-//        for (String key : keys) {
-//            Student aStudent = students.get(key);
+    private static void viewAllStudents() {
+//        ArrayList<String> hashArr = Arrays.asList(students);
+        //        ArrayList<String> foods = new ArrayList<>();
+
+        ;
+
+//        for (String student : students.keySet()) {
+//
+////            Student aStudent = students.get(key);
 //            System.out.printf("""
 //                    Student: %s
 //                    Grades:  %s
 //                    Average: %s
 //
-//                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+//                    """, student.getName, student.grades, student.getGradeAverage());
 //        }
-//
-////        for (Student student : students) {
-////            System.out.println(student);
-////        }
+
+//        for (Student student : students) {
+//            System.out.println(student);
+//        }
+//        System.out.println(students.get(students));
+    }
+
+//    private static void viewStudentsByName(String string) {
+//        for (Student student : students) {
+//            if (student.getName().equals(student)) {
+//                System.out.println(student);
+//            }
+//        }
 //        System.out.println();
 //    }
-
-    private static void viewStudentsByName(String string) {
-        for (Student student : students) {
-            if (student.getName().equals(student)) {
-                System.out.println(student);
-            }
-        }
-        System.out.println();
-    }
 }
