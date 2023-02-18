@@ -12,8 +12,8 @@ public class GradesApplication {
 
 //    private static Student[] students;
 
-    private static HashMap<String, Student> students;
 
+    private static HashMap<String, Student> students;
 
     public static void main(String[] args) {
         Input input = new Input();
@@ -39,17 +39,17 @@ public class GradesApplication {
         students.put("elliot", elliot);
 //        System.out.println(students);
 
-        Set<String> keys = students.keySet();
-
-        for (String key : keys) {
-            Student aStudent = students.get(key);
-            System.out.printf("""
-                    Student: %s
-                    Grades:  %s
-                    Average: %s
-
-                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
-        }
+//        Set<String> keys = students.keySet();
+//
+//        for (String key : keys) {
+//            Student aStudent = students.get(key);
+//            System.out.printf("""
+//                    Student: %s
+//                    Grades:  %s
+//                    Average: %s
+//
+//                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+//        }
 
         while(true) {
             printMenu();
@@ -64,9 +64,8 @@ public class GradesApplication {
 
     }
 
-
     private static void printMenu() {
-        System.out.println("""
+        System.out.print("""
                 Welcome!
 
                 Here are the GitHub usernames of our students:
@@ -89,45 +88,78 @@ public class GradesApplication {
         switch (choice) {
             case 1:
                 viewAllStudents();
+                break;
             case 2:
-//                viewAllGrades();
+                viewAllGrades();
+                break;
             case 3:
-//                overallClassAverage();
+                overallClassAverage();
+                break;
             case 4:
-//                printCsvReport();
+                printCsvReport();
                 break;
         }
     }
 
     private static void viewAllStudents() {
-//        ArrayList<String> hashArr = Arrays.asList(students);
-        //        ArrayList<String> foods = new ArrayList<>();
+        Set<String> keys = students.keySet();
 
-        ;
+        for (String key : keys) {
+            Student aStudent = students.get(key);
+            System.out.printf("""
+                    Student: %s
+                    Grades:  %s
+                    Average: %s
 
-//        for (String student : students.keySet()) {
-//
-////            Student aStudent = students.get(key);
-//            System.out.printf("""
-//                    Student: %s
-//                    Grades:  %s
-//                    Average: %s
-//
-//                    """, student.getName, student.grades, student.getGradeAverage());
-//        }
-
-//        for (Student student : students) {
-//            System.out.println(student);
-//        }
-//        System.out.println(students.get(students));
+                    """, aStudent.getName(), aStudent.grades, aStudent.getGradeAverage());
+        }
     }
 
-//    private static void viewStudentsByName(String string) {
-//        for (Student student : students) {
-//            if (student.getName().equals(student)) {
-//                System.out.println(student);
-//            }
-//        }
-//        System.out.println();
-//    }
+    private static void viewAllGrades() {
+        Set<String> keys = students.keySet();
+        for (String key : keys) {
+            Student aStudent = students.get(key);
+            System.out.printf("""
+                    Student: %s
+                    Grades:  %s
+
+                    """, aStudent.getName(), aStudent.grades);
+        }
+    }
+
+    private static void overallClassAverage() {
+        Set<String> keys = students.keySet();
+        int classAvgSum = 0;
+        for (String key : keys) {
+            Student aStudent = students.get(key);
+            classAvgSum += aStudent.getGradeAverage();
+        }
+        System.out.println(classAvgSum/students.size());
+    }
+
+    private static void printCsvReport() {
+        System.out.println("""
+        ░░░░░░░░░█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒░░░░░░░░
+        ░░░░░░░░░█░░░░░░░░░░░░░░░░░░░▓▓▓█▒░░░░░░
+        ░░░░░░░░░█░░░░░░░░░░░░░░░░░░░▓▓░░▓█▒░░░░
+        ░░░░░░░░░█░░░░░░░░░░░░░░░░░░░▓▓░░░░▓█▒░░
+        ░░░░░░░░░█░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓█▓░
+        ░░░░░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░▒█░
+        ░░░░░░░░░█░░░█▓▒▒▒▓█▒▒▒▒▒▒▒▓█▒▒▒▒█▒░░▒█░
+        ░░░░░░░░░█░░░█▓▓▓▓▓█▓▓▓▓▓▓▓██▓▓▓▓█▒░░▒█░
+        ░░░░░░░░░█░░░█▓▒▒▒▓█▒▒▒▒▒▒▒▓█▒▒▒▒█▒░░▒█░
+        ░░░░░░░░░█░░░██▓▓▓██▓▓▓▓▓▓▓██▓▓▓▓█▒░░▒█░
+        ░░░░░░░░░▓░░░▓▒▒▒▒▒▓▒▒▒▒▒▒▒▓█▒▒▒▒█▒░░▒█░
+        ░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▓█▓▓▓▓█▒░░▒█░
+        ░▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▓▓█▒▒▒▒█▒░░▒█░
+        ░▓▓▒▒▒▓▓▓▓▒▒▓█▓▓▒▒█▒▒▓▓▒▒█▓▓█▓▓▓▓█▒░░▒█░
+        ░▓▓▒▒█▓▒▒▒▒▒▓█▓▓▒▒█▓▓█▒▒▒█▓▓█▒▒▒▒█▒░░▒█░
+        ░▓▓▒▒▓█▓▒▓▓▒▓▒▒█▓▒▒██▒▒▒▒█▒▒▓▓▓▓▓▓░░░▒█░
+        ░▓▓▒▒▒▒▓▓▓▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒█▒░░░░░░░░░░▒█░
+        ░▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█░░░░░░░░░░░▒█░
+        ░░░░░░░░░▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░▒█░
+        ░░░░░░░░░█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▒░
+
+                """);
+    }
 }
