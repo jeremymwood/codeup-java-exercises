@@ -28,6 +28,7 @@ public class lecPerson {
     }
 
     public static void main(String[] args) {
+
 //        Person rick = new Person();
 //        rick.firstName = "Rick";
 //        rick.middleName = "Daniel";
