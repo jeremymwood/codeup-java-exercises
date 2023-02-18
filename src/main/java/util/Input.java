@@ -24,10 +24,10 @@ public class Input {
 //        System.out.print("enter boolean: ");
         String myBool = scanner.nextLine();
         if (myBool.equalsIgnoreCase("y") || myBool.equalsIgnoreCase("yes") || myBool.equalsIgnoreCase("true")) {
-            System.out.printf("your boolean, %s, is true", myBool);
+//            System.out.printf("your boolean, %s, is true", myBool);
             return true;
         } else {
-            System.out.printf("your boolean, %s, is false. try again\n", myBool);
+//            System.out.printf("your boolean, %s, is false. try again\n", myBool);
             return yesNo();
         }
     }

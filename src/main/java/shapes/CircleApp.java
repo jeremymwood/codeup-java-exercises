@@ -23,14 +23,15 @@ public class CircleApp {
                 
                 """, myCircle.getRadius(), myCircle.getArea(), myCircle.getCircumference());
 
-        input.getString();
-
-        boolean done = input.yesNo();
-            System.out.println("Quit? (y/n)");
-        if(done) {
-//            System.out.println("you made" + Circle.getCircleCounter() + "circles.");
-            break;
-        }
+//            input.getString();
+//            boolean done = input.yesNo();
+//
+//        if(done) {
+//            System.out.println("Quit? (y/n)");
+////            System.out.println("you made" + Circle.getCircleCounter() + "circles.");
+//            System.out.println("all done making circles.");
+//            break;
+//        }
 
         } while (true);
     }
