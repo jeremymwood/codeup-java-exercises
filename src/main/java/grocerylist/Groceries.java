@@ -1,9 +1,18 @@
 package grocerylist;
 
+import grades.Student;
+import util.Input;
+
+import java.awt.event.ItemEvent;
+import java.util.HashMap;
+
 public class Groceries {
 //    grocery list command line application
 //
 //    use  input class
+    private static Input input = new Input();
+
+    private static HashMap<String, Item> items;
 //
 //    prompt to create a grocery list
 //      no: close application
@@ -21,4 +30,11 @@ public class Groceries {
 //
 //    print list a-z by category with quantity
 
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        items = new HashMap<>();
+
+        Item apples = new Item("apples");
+    }
 }
