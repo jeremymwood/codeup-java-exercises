@@ -26,10 +26,8 @@ public class Input {
         if (myBool.equalsIgnoreCase("y") || myBool.equalsIgnoreCase("yes") || myBool.equalsIgnoreCase("true")) {
 //            System.out.printf("your boolean, %s, is true", myBool);
             return true;
-        } else {
-//            System.out.printf("your boolean, %s, is false. try again\n", myBool);
-            return yesNo();
         }
+            return false;
     }
 
 //    public static int getInt(int min, int max) {

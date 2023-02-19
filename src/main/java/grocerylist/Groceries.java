@@ -1,6 +1,5 @@
 package grocerylist;
 
-import grades.Student;
 import util.Input;
 
 import java.awt.event.ItemEvent;
@@ -14,7 +13,37 @@ public class Groceries {
     private static Input input = new Input();
 
     private static HashMap<String, Item> items;
+
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        items = new HashMap<>();
+
+//        Item apples = new Item("apples");
+//        apples.addQuantity(4);
+//        System.out.println(apples.TotalQuantity);
+//        apples.addQuantity(4);
+//        System.out.println(apples.getTotalQuantity());
+//        System.out.println(apples);
 //
+//        apples.addCategory("produce");
+//        System.out.println(apples);
+//
+//        items.put("apples", apples);
+
+         do {
+            printMenu();
+            boolean choice = Input.yesNo();
+            if(!choice) {
+                break;
+            }
+        } while(true);
+
+        System.out.println("Bye");
+
+    }
+
+    //
 //    prompt to create a grocery list
 //      no: close application
 //
@@ -31,22 +60,17 @@ public class Groceries {
 //
 //    print list a-z by category with quantity
 
-    public static void main(String[] args) {
-        Input input = new Input();
+    private static void printMenu() {
+        System.out.print("""
+                Would you like to make a grocery list?
 
-        items = new HashMap<>();
+                0: Exit
+                1: Print student info
+                2: View all the grades
+                3: Overall class average
+                4: Print CSV report
 
-        Item apples = new Item("apples");
-        apples.addQuantity(4);
-        System.out.println(apples.TotalQuantity);
-        apples.addQuantity(4);
-        System.out.println(apples.getTotalQuantity());
-        System.out.println(apples);
-
-        apples.addCategory("produce");
-        System.out.println(apples);
-
-
-
+                Enter your choice:
+                """);
     }
 }
