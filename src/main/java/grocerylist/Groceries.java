@@ -4,6 +4,7 @@ import grades.Student;
 import util.Input;
 
 import java.awt.event.ItemEvent;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Groceries {
@@ -36,5 +37,16 @@ public class Groceries {
         items = new HashMap<>();
 
         Item apples = new Item("apples");
+        apples.addQuantity(4);
+        System.out.println(apples.TotalQuantity);
+        apples.addQuantity(4);
+        System.out.println(apples.getTotalQuantity());
+        System.out.println(apples);
+
+        apples.addCategory("produce");
+        System.out.println(apples);
+
+
+
     }
 }

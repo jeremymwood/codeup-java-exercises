@@ -10,17 +10,19 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "name='" + name + '\'' +
-                "name='" + TotalQuantity + '\'' +
-                '}';
+                "name= " + name +
+                ", category= " + AllCategories + ", total quantity= " + TotalQuantity +
+                "}";
     }
 
     public ArrayList<Integer> TotalQuantity;
+    public ArrayList<String> AllCategories;
 
 
     public Item(String name) {
         this.name = name;
         this.TotalQuantity = new ArrayList<>();
+        this.AllCategories = new ArrayList<>();
     }
 
     public String getName() {
@@ -31,12 +33,16 @@ public class Item {
         TotalQuantity.add(quantity);
     }
 
+    public void addCategory(String category) {
+        AllCategories.add(category);
+    }
+
     public double getTotalQuantity() {
         int quantitySum = 0;
         for (int quantity : TotalQuantity) {
             quantitySum += quantity;
         }
-        return quantitySum / TotalQuantity.size();
+        return quantitySum;
     }
 
 

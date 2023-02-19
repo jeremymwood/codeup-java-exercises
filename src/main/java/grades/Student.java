@@ -13,7 +13,6 @@ public class Student {
                 "name='" + name + '\'' +
                 ", grades=" + grades +
                 '}';
-
     }
 
     public ArrayList<Integer> grades;
