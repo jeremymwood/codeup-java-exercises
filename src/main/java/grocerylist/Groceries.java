@@ -62,13 +62,13 @@ public class Groceries {
                 addProduce();
                 break;
             case 2:
-//                addDairy();
+                addDairy();
                 break;
             case 3:
-//                addDryGoods();
+                addDryGoods();
                 break;
             case 4:
-//                AddFrozen();
+                addFrozen();
                 break;
             case 5:
                 break;
@@ -76,12 +76,40 @@ public class Groceries {
     }
 
     private static void addProduce() {
-        Set<String> keys = items.keySet();
-
-        for (String key : keys) {
-            Item anItem = items.get(key);
+//        Set<String> keys = items.keySet();
             System.out.print("Enter fruit or vegetable:");
-        }
+
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+//            System.out.print("Enter fruit or vegetable:");
+//        }
+    }
+    private static void addDairy() {
+//        Set<String> keys = items.keySet();
+            System.out.print("Enter a dairy item:");
+
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+//            System.out.print("Enter fruit or vegetable:");
+//        }
+    }
+    private static void addDryGoods() {
+//        Set<String> keys = items.keySet();
+            System.out.print("Enter a dry good:");
+
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+//            System.out.print("Enter fruit or vegetable:");
+//        }
+    }
+    private static void addFrozen() {
+//        Set<String> keys = items.keySet();
+            System.out.print("Enter a frozen item:");
+
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+//            System.out.print("Enter fruit or vegetable:");
+//        }
     }
 
 }
