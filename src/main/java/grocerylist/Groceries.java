@@ -10,7 +10,7 @@ public class Groceries {
     private static Input input = new Input();
     private static HashMap<String, Item> items;
     public static void main(String[] args) {
-        Input input = new Input();
+//        Input input = new Input();
         items = new HashMap<>();
 //        Item apples = new Item("apples");
 //        apples.addQuantity(4);
@@ -77,39 +77,34 @@ public class Groceries {
 
     private static void addProduce() {
 //        Set<String> keys = items.keySet();
-            System.out.print("Enter fruit or vegetable:");
+//        Item apples = new Item("apples");
+//        apples.addQuantity(4);
+//        System.out.println(apples.TotalQuantity);
+//        apples.addQuantity(4);
+//        System.out.println(apples);
+//        apples.addCategory("produce");
+//        System.out.println(apples);
+//        items.put("apples", apples);
+        System.out.print("Enter fruit or vegetable:");
+        Input input = new Input();
+        System.out.println(input);
 
 //        for (String key : keys) {
 //            Item anItem = items.get(key);
-//            System.out.print("Enter fruit or vegetable:");
+////            Item apples = new Item("apples");
+//            anItem.getName();
+//            System.out.print(anItem);
+//            System.out.print(anItem.name);
 //        }
     }
     private static void addDairy() {
-//        Set<String> keys = items.keySet();
             System.out.print("Enter a dairy item:");
-
-//        for (String key : keys) {
-//            Item anItem = items.get(key);
-//            System.out.print("Enter fruit or vegetable:");
-//        }
     }
     private static void addDryGoods() {
-//        Set<String> keys = items.keySet();
             System.out.print("Enter a dry good:");
-
-//        for (String key : keys) {
-//            Item anItem = items.get(key);
-//            System.out.print("Enter fruit or vegetable:");
-//        }
     }
     private static void addFrozen() {
-//        Set<String> keys = items.keySet();
             System.out.print("Enter a frozen item:");
-
-//        for (String key : keys) {
-//            Item anItem = items.get(key);
-//            System.out.print("Enter fruit or vegetable:");
-//        }
     }
 
 }
