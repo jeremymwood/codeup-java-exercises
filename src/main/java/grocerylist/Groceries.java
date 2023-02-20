@@ -4,10 +4,13 @@ import grades.Student;
 import util.Input;
 
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Groceries {
     private static Input input = new Input();
+    private static Scanner scanner = new Scanner(System.in);
+
     private static HashMap<String, Item> items;
     public static void main(String[] args) {
 //        Input input = new Input();
@@ -86,8 +89,12 @@ public class Groceries {
 //        System.out.println(apples);
 //        items.put("apples", apples);
         System.out.print("Enter fruit or vegetable:");
-        Input input = new Input();
-        System.out.println(input);
+        String string = scanner.nextLine();
+
+//        input = new Input();
+//        String nextInput = input.nextLine();
+        System.out.println(string);
+
 
 //        for (String key : keys) {
 //            Item anItem = items.get(key);
