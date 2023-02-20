@@ -31,7 +31,6 @@ public class Groceries {
              break;
         } while(true);
         System.out.println("Bye");
-
     }
 //              2) Enter item name
 //              3) Enter item quantity
@@ -42,7 +41,6 @@ public class Groceries {
                     Select a category to add an item to:
                     | 1: Produce | 2: Dairy | 3: Dry goods | 4: Frozen | 5: Exit |
                     """);
-
             do {
                 int choice = input.getInt(1, 5, "");
                 doChoice(choice);
@@ -50,7 +48,6 @@ public class Groceries {
                     break;
                 }
             } while(true);
-
         }
 
     private static void doChoice(int choice) {
@@ -81,17 +78,26 @@ public class Groceries {
 //        apples.addCategory("produce");
 //        System.out.println(apples);
 //        items.put("apples", apples);
-        Set<String> keys = items.keySet();
+
+//        Set<String> keys = items.keySet();
         System.out.println("Enter fruit or vegetable:");
-        String string = scanner.nextLine();
-        System.out.println(string);
-        for (String key : keys) {
-            Item anItem = items.get(key);
-//            Item apples = new Item("apples");
-            anItem.getName();
-            System.out.print(anItem);
-//            System.out.print(anItem.name);
-        }
+        String stringProduce = scanner.nextLine();
+        System.out.println(stringProduce);
+        addPlotQuantity();
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+////            Item apples = new Item("apples");
+//            anItem.getName();
+//            System.out.print(anItem);
+////            System.out.print(anItem.name);
+//        }
+    }
+
+    private static void addPlotQuantity() {
+        System.out.print("Enter a quantity: ");
+        String stringQuantity = scanner.nextLine();
+        System.out.println(stringQuantity);
+
     }
     private static void addDairy() {
             System.out.println("Enter a dairy item:");
