@@ -10,7 +10,6 @@ import java.util.Set;
 public class Groceries {
     private static Input input = new Input();
     private static Scanner scanner = new Scanner(System.in);
-
     private static HashMap<String, Item> items;
     public static void main(String[] args) {
 //        Input input = new Input();
@@ -23,9 +22,9 @@ public class Groceries {
 //        apples.addCategory("produce");
 //        System.out.println(apples);
 //        items.put("apples", apples);
-         System.out.print("Would you like to make a grocery list? (Y/N)");
+         System.out.println("Would you like to make a grocery list? (Y/N)");
          do {
-            boolean choice = Input.yesNo();
+            boolean choice = input.yesNo();
             if(choice) {
                 categoryMenu();
             }
@@ -41,12 +40,7 @@ public class Groceries {
         private static void categoryMenu() {
             System.out.print("""
                     Select a category to add an item to:
-
-                    1: Produce
-                    2: Dairy
-                    3: Dry goods
-                    4: Frozen
-                    5: Exit
+                    | 1: Produce | 2: Dairy | 3: Dry goods | 4: Frozen | 5: Exit |
                     """);
 
             do {
@@ -79,7 +73,6 @@ public class Groceries {
     }
 
     private static void addProduce() {
-//        Set<String> keys = items.keySet();
 //        Item apples = new Item("apples");
 //        apples.addQuantity(4);
 //        System.out.println(apples.TotalQuantity);
@@ -88,30 +81,26 @@ public class Groceries {
 //        apples.addCategory("produce");
 //        System.out.println(apples);
 //        items.put("apples", apples);
-        System.out.print("Enter fruit or vegetable:");
+        Set<String> keys = items.keySet();
+        System.out.println("Enter fruit or vegetable:");
         String string = scanner.nextLine();
-
-//        input = new Input();
-//        String nextInput = input.nextLine();
         System.out.println(string);
-
-
-//        for (String key : keys) {
-//            Item anItem = items.get(key);
-////            Item apples = new Item("apples");
-//            anItem.getName();
-//            System.out.print(anItem);
+        for (String key : keys) {
+            Item anItem = items.get(key);
+//            Item apples = new Item("apples");
+            anItem.getName();
+            System.out.print(anItem);
 //            System.out.print(anItem.name);
-//        }
+        }
     }
     private static void addDairy() {
-            System.out.print("Enter a dairy item:");
+            System.out.println("Enter a dairy item:");
     }
     private static void addDryGoods() {
-            System.out.print("Enter a dry good:");
+            System.out.println("Enter a dry good:");
     }
     private static void addFrozen() {
-            System.out.print("Enter a frozen item:");
+            System.out.println("Enter a frozen item:");
     }
 
 }
