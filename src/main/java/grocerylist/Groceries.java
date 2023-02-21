@@ -80,34 +80,31 @@ public class Groceries {
     }
 
     public static void addProduce() {
+//        Set<String> keys = produce.keySet();
         System.out.println("Enter fruit or vegetable:");
         String stringProduce = scanner.nextLine();
         groceryList.add(stringProduce);
         produce.put(String.valueOf(stringProduce),stringProduce);
         System.out.println(produce.get(stringProduce));
-//        System.out.println(stringProduce);
-    }
+        addPlotQuantity();
+        System.out.println(groceryList);
 
-//    private static void addProduce() {
-//        Set<String> keys = produce.keySet();
-//
-//        System.out.println("Enter fruit or vegetable:");
-//        String stringProduce = scanner.nextLine();
-//
-//        produce.put(String.valueOf(keys),stringProduce);
-//        System.out.println(produce.get(stringProduce));
-//        System.out.println(stringProduce);
-//
-//
-//        addPlotQuantity();
+        System.out.println("Would you like to add another produce item? (Y/N)");
+        boolean choice = Input.yesNo();
+        if(choice) {
+            System.out.println("should return addProduce menu");
+//            addProduce();
+        } else {
+            System.out.println("should return categoryMenu menu");
+//        categoryMenu();
+        }
 ////        for (String key : keys) {
 ////            Item anItem = items.get(key);
 //////            Item apples = new Item("apples");
 ////            anItem.getName();
 ////            System.out.print(anItem);
 //////            System.out.print(anItem.name);
-////        }
-//    }
+    }
 
     private static void addPlotQuantity() {
         System.out.print("Enter a quantity: ");
