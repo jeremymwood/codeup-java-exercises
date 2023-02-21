@@ -1,8 +1,6 @@
 package grocerylist;
 
-import grades.Student;
 import util.Input;
-
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Set;
@@ -10,10 +8,11 @@ import java.util.Set;
 public class Groceries {
     private static Input input = new Input();
     private static Scanner scanner = new Scanner(System.in);
-    private static HashMap<String, Item> items;
+    private static HashMap<String, Item> produce;
+
     public static void main(String[] args) {
 //        Input input = new Input();
-        items = new HashMap<>();
+        produce = new HashMap<>();
 //        Item apples = new Item("apples");
 //        apples.addQuantity(4);
 //        System.out.println(apples.TotalQuantity);
@@ -79,10 +78,18 @@ public class Groceries {
 //        System.out.println(apples);
 //        items.put("apples", apples);
 
-//        Set<String> keys = items.keySet();
+        Set<String> keys = produce.keySet();
         System.out.println("Enter fruit or vegetable:");
         String stringProduce = scanner.nextLine();
         System.out.println(stringProduce);
+
+//        produce.put("stringProduce", stringProduce);
+//        System.out.println(produce.get(stringProduce));
+//        System.out.println(produce.put(stringProduce.toString(), keys));
+        System.out.println(produce.toString());
+        System.out.println(produce);
+
+
         addPlotQuantity();
 //        for (String key : keys) {
 //            Item anItem = items.get(key);
