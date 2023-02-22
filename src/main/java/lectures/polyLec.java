@@ -1,3 +1,5 @@
+package lectures;
+
 import playtime.Fighter;
 import playtime.Ninja;
 import playtime.Weapon;

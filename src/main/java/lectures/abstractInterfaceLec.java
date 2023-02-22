@@ -1,3 +1,5 @@
+package lectures;
+
 public class abstractInterfaceLec {
 
 
