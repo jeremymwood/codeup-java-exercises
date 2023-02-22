@@ -90,6 +90,15 @@ public class Groceries {
         System.out.println(groceryList);
 
         System.out.println("Would you like to add another produce item? (Y/N)");
+
+//        do {
+//            boolean choice = Input.yesNo();
+//            if(choice) {
+//                categoryMenu();
+//            }
+//            break;
+//        } while(true);
+
         boolean choice = Input.yesNo();
         if(choice) {
             System.out.println("should return addProduce menu");

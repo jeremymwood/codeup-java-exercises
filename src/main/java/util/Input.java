@@ -42,12 +42,29 @@ public class Input {
 //            }
 //    }
 
+//    public static int getInt(){
+////        System.out.print("Enter a number: ");
+////        int userNum = scanner.nextInt();
+////        System.out.printf("huzzah! your int is %s.)", userNum);
+////        return userNum;
+//        return scanner.nextInt();
+//    }
+
     public static int getInt(){
-//        System.out.print("Enter a number: ");
-//        int userNum = scanner.nextInt();
-//        System.out.printf("huzzah! your int is %s.)", userNum);
-//        return userNum;
-        return scanner.nextInt();
+//        return sc.nextInt();
+        int userInt = 0;
+
+        String s = getString();
+
+        try {
+            userInt = Integer.parseInt(s);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid Integer. Please re-enter; ");
+            userInt = getInt();
+        }
+
+        return userInt;
     }
     public int getInt(int min, int max, String string){
 //        System.out.println("choose a number between " + min + " and " + max);
@@ -61,7 +78,12 @@ public class Input {
         return myNumber;
     }
 
-
+    public static double getDouble(){
+        System.out.print("Enter a number: ");
+        double userNum = scanner.nextDouble();
+//        System.out.printf("huzzah! your double is %s.", userNum);
+        return userNum;
+    }
 
     public static double getDouble(double min, double max) {
         System.out.printf("Enter number between %s and %s: ", min, max);
@@ -73,13 +95,6 @@ public class Input {
             System.out.printf("%s is out of range, try again:/\n", userNum);
             return getDouble(min, max);
         }
-    }
-
-    public static double getDouble(){
-        System.out.print("Enter a number: ");
-        double userNum = scanner.nextDouble();
-//        System.out.printf("huzzah! your double is %s.", userNum);
-        return userNum;
     }
 
 //            int myNumber = (int) (Math.random() * 100) + 1;
@@ -101,5 +116,37 @@ public class Input {
 //        public double getCircumference() {
 //            return Math
 //        }
+
+    public int getHex() {
+        int userInt = 0;
+
+        String s = getString();
+
+        try {
+            userInt = Integer.valueOf(s, 16);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid Integer. Please re-enter; ");
+            userInt = getHex();
+        }
+
+        return userInt;
+    }
+
+    public int getBinary() {
+        int userInt = 0;
+
+        String s = getString();
+
+        try {
+            userInt = Integer.valueOf(s, 2);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid Integer. Please re-enter; ");
+            userInt = getHex();
+        }
+
+        return userInt;
+    }
 
     }
