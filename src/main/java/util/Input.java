@@ -3,24 +3,30 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private static Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
-    public static String getString(String string){
-//        System.out.print("Enter a number: ");
-//        int userNum = scanner.nextInt();
-//        System.out.printf("huzzah! your int is %s.)", userNum);
-//        return userNum;
-        return scanner.nextLine();
-    }
 
-    public static String getString(){
+    public String getString(){
 //        System.out.print("enter a string:");
         String string = scanner.nextLine();
 //        System.out.printf("your string: %s\n", string);
         return string;
     }
 
-    public static boolean yesNo() {
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
+    }
+//    public String getString(String string){
+////        System.out.print("Enter a number: ");
+////        int userNum = scanner.nextInt();
+////        System.out.printf("huzzah! your int is %s.)", userNum);
+////        return userNum;
+//        return scanner.nextLine();
+//    }
+
+
+    public boolean yesNo() {
 //        System.out.print("enter boolean: ");
         String myBool = scanner.nextLine();
         if (myBool.equalsIgnoreCase("y") || myBool.equalsIgnoreCase("yes") || myBool.equalsIgnoreCase("true")) {
@@ -28,6 +34,10 @@ public class Input {
             return true;
         }
             return false;
+    }
+    public boolean yesNo(boolean prompt) {
+        System.out.println(prompt);
+        return yesNo();
     }
 
 //    public static int getInt(int min, int max) {
@@ -50,7 +60,7 @@ public class Input {
 //        return scanner.nextInt();
 //    }
 
-    public static int getInt(){
+    public int getInt(){
 //        return sc.nextInt();
         int userInt = 0;
 
@@ -66,6 +76,11 @@ public class Input {
 
         return userInt;
     }
+    public int getInt(int prompt) {
+        System.out.println(prompt);
+        return getInt();
+    }
+
     public int getInt(int min, int max, String string){
 //        System.out.println("choose a number between " + min + " and " + max);
         int myNumber = getInt();
@@ -78,14 +93,18 @@ public class Input {
         return myNumber;
     }
 
-    public static double getDouble(){
+    public double getDouble(){
         System.out.print("Enter a number: ");
         double userNum = scanner.nextDouble();
 //        System.out.printf("huzzah! your double is %s.", userNum);
         return userNum;
     }
+    public double getDouble(double prompt) {
+        System.out.println(prompt);
+        return getDouble();
+    }
 
-    public static double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         System.out.printf("Enter number between %s and %s: ", min, max);
         Double userNum = scanner.nextDouble();
         if (userNum >= min && userNum <= max) {
