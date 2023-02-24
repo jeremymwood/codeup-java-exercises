@@ -7,6 +7,16 @@ public class ConsoleExercises {
 
         Scanner input = new Scanner(System.in);
 
+        String jeremy = "jeremy";
+        String matt = "matt";
+
+
+
+//        System.out.println(jeremy);
+        System.out.printf("| %-10s|\n", jeremy);
+        System.out.printf("| %-10s|\n", matt);
+
+
 //        System.out.print("enter a integer: ");
 //        int anInt = input.nextInt();
 //        System.out.println("your integer is: " + anInt);
@@ -43,18 +53,18 @@ public class ConsoleExercises {
 
 //        System.out.printf("""width: %s feet%nlength: %s feet%n height: %s feet%n volume: %s cubic feet""", str, str2, str3, volume);
 
-        input.close();
-
-
-        double money = .1;
-        System.out.println(money);
-        System.out.println(money);
-
-        money += .1;
-        System.out.println(money);
-
-        money += .1;
-        System.out.println(money);
+//        input.close();
+//
+//
+//        double money = .1;
+//        System.out.println(money);
+//        System.out.println(money);
+//
+//        money += .1;
+//        System.out.println(money);
+//
+//        money += .1;
+//        System.out.println(money);
 
 
 //        for (int i = 0; i < 10; i++) {

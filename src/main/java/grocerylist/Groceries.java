@@ -90,29 +90,30 @@ public class Groceries {
         System.out.println(groceryList);
 
         System.out.println("Would you like to add another produce item? (Y/N)");
-
-//        do {
-//            boolean choice = Input.yesNo();
-//            if(choice) {
-//                categoryMenu();
-//            }
-//            break;
-//        } while(true);
-
         boolean choice = Input.yesNo();
-        if(choice) {
+
+        do {
+//            String choice = scanner.nextLine();
+            if(choice) {
+                categoryMenu();
+            }
+            break;
+        } while(true);
+
+        boolean choice2 = Input.yesNo();
+        if(choice2) {
             System.out.println("should return addProduce menu");
 //            addProduce();
         } else {
             System.out.println("should return categoryMenu menu");
 //        categoryMenu();
         }
-////        for (String key : keys) {
-////            Item anItem = items.get(key);
-//////            Item apples = new Item("apples");
-////            anItem.getName();
-////            System.out.print(anItem);
-//////            System.out.print(anItem.name);
+//        for (String key : keys) {
+//            Item anItem = items.get(key);
+////            Item apples = new Item("apples");
+//            anItem.getName();
+//            System.out.print(anItem);
+////            System.out.print(anItem.name);
     }
 
     private static void addPlotQuantity() {

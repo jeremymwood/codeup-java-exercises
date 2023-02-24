@@ -9,7 +9,7 @@ public class InputTest {
 //        Input.getInt(1, 10);
 //        Input.getInt();
 //        Input.getDouble(1, 10);
-        Input.getDouble();
+//        Input.getDouble();
 
 //        scanner.close();
 

@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
 
     public String getString(){
@@ -26,7 +26,7 @@ public class Input {
 //    }
 
 
-    public boolean yesNo() {
+    public static boolean yesNo() {
 //        System.out.print("enter boolean: ");
         String myBool = scanner.nextLine();
         if (myBool.equalsIgnoreCase("y") || myBool.equalsIgnoreCase("yes") || myBool.equalsIgnoreCase("true")) {
@@ -35,10 +35,10 @@ public class Input {
         }
             return false;
     }
-    public boolean yesNo(boolean prompt) {
-        System.out.println(prompt);
-        return yesNo();
-    }
+//    public boolean yesNo(boolean prompt) {
+//        System.out.println(prompt);
+//        return yesNo();
+//    }
 
 //    public static int getInt(int min, int max) {
 //        System.out.printf("Enter number between %s and %s: ", min, max);
