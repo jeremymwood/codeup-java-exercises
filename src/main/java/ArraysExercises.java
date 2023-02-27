@@ -187,5 +187,13 @@ public class ArraysExercises {
 //            return newArray;
 //        }
 
+//        doc's code
+//        public static Person [] addPerson(Person [] people, Person newPerson) {
+//            // create a copy of people that has 1 new extra slot in it
+//            Person [] newArray = Arrays.copyOf(people, people.length + 1);
+//            newArray[newArray.length - 1] = newPerson;
+//            return newArray;
+//        }
+
     }
 }
