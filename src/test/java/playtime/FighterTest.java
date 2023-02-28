@@ -7,6 +7,11 @@ import java.security.PublicKey;
 import static org.junit.Assert.*;
 
 public class FighterTest {
+
+    //things to test:
+    //program logic - fighters hitting
+    //parameter boundaries - high, low, null, string - empty string
+    //
     Fighter noName = new Fighter("Unknown fighter");
     Fighter bob = new Fighter("bob");
 
@@ -96,5 +101,7 @@ public class FighterTest {
         System.out.println(bob.getHealth());
         assertEquals(90, bob.getHealth());
     }
+
+//    update testFighterNameTooShort
 
 }
