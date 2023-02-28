@@ -1,20 +1,34 @@
 import org.junit.Test;
+import org.apache.commons.lang3.StringUtils;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 
 public class CohortTest {
 //    A Cohort instance can add a Student to the List of students.
-    @Test
-    public void testAddStudent() {
         Student jeremy = new Student(123456789, "Jeremy");
         Student kenzi = new Student(123456123, "Kenzi");
         Cohort ymir = new Cohort();
+    @Test
+    public void testAddStudentsToCohort() {
         ymir.addStudent(jeremy);
         ymir.addStudent(kenzi);
         System.out.println(ymir.getStudents());
+        //need assertion and to string
     }
-//    A Cohort instance can get the current List of students.
-//    A Cohort instance can get the average, and it's being calculated correctly.
-//    Go back to the StudentTest class and refactor the code to avoid any repetition in the test cases, the use of the @Before annotation will be useful to achieve this, do the same with this new CohortTest class if you find any code repetition as well.
+    @Test
+    public void testGetCohortAvg() {
+        ymir.addStudent(jeremy);
+        ymir.addStudent(kenzi);
 
+        jeremy.addGrade(100);
+        jeremy.addGrade(60);
+        jeremy.addGrade(80);
+
+        kenzi.addGrade(100);
+        kenzi.addGrade(95);
+        kenzi.addGrade(90);
+
+        assertEquals(87.5, ymir.getCohortAverage(), 0.000001);
+    }
 }

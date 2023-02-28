@@ -31,6 +31,7 @@ public class StudentTest {
 
         Integer [] testGrades = {50, 60, 80};
         assertArrayEquals(testGrades, jeremy.getGrades().toArray(new Integer[testGrades.length]));
+        assertArrayEquals(testGrades, jeremy.getGrades().toArray(new Integer[testGrades.length]));
     }
     @Test
     public void testStudentGradeAvg() {
