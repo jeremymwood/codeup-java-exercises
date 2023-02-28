@@ -7,6 +7,12 @@ import static org.junit.Assert.*;
 public class StudentTest {
     Student jeremy = new Student(12345678, "Jeremy");
 
+    //nice
+    public void add3Grades(Student student) {
+        student.addGrade(50);
+        student.addGrade(60);
+        student.addGrade(80);
+    }
     @Test
     public void testStudentId() {
         assertEquals(12345678, jeremy.getId());
@@ -25,9 +31,7 @@ public class StudentTest {
     }
     @Test
     public void testStudentGrade() {
-        jeremy.addGrade(50);
-        jeremy.addGrade(60);
-        jeremy.addGrade(80);
+        add3Grades(jeremy);
 
         Integer [] testGrades = {50, 60, 80};
         assertArrayEquals(testGrades, jeremy.getGrades().toArray(new Integer[testGrades.length]));
