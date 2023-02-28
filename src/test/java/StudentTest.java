@@ -1,10 +1,7 @@
 import org.junit.Test;
 import org.apache.commons.lang3.StringUtils;
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 public class StudentTest {
@@ -20,14 +17,14 @@ public class StudentTest {
     }
     @Test
     public void testStudentGrade() {
-        jeremy.addGrade(100);
-        String formattedGrade = jeremy.getGrades().toString()
-                .replace(",", "")
-                .replace("[", "")
-                .replace("]", "")
-                .trim();
-        assertEquals("100", formattedGrade);
+        jeremy.addGrade(50);
+        jeremy.addGrade(60);
+        jeremy.addGrade(80);
+
+        Integer [] testGrades = {50, 60, 80};
+        assertArrayEquals(testGrades, jeremy.getGrades().toArray(new Integer[testGrades.length]));
     }
+
 //    test empty strings and null values
 //    add grade
 //    get average
