@@ -34,5 +34,13 @@ public class TestCodeupCrypt {
     public void testHashPwU() {
         assertEquals("9r", CodeupCrypt.hashPassword("Ur"));
     }
+    @Test
+    public void testHashPwAllVowels() {
+        assertEquals("3D9C4T10N", CodeupCrypt.hashPassword("EDUCATION"));
+    }
+    @Test
+    public void testHashPwNoVowels() {
+        assertEquals("Rhythm", CodeupCrypt.hashPassword("Rhythm"));
+    }
 
 }
