@@ -16,6 +16,14 @@ public class StudentTest {
         assertEquals("Jeremy", jeremy.getName());
     }
     @Test
+    public void testNullName() {
+        assertNotNull(null, jeremy.getName());
+    }
+    @Test
+    public void testEmptyName() {
+        assertNotEquals("", jeremy.getName());
+    }
+    @Test
     public void testStudentGrade() {
         jeremy.addGrade(50);
         jeremy.addGrade(60);
@@ -24,9 +32,18 @@ public class StudentTest {
         Integer [] testGrades = {50, 60, 80};
         assertArrayEquals(testGrades, jeremy.getGrades().toArray(new Integer[testGrades.length]));
     }
+    @Test
+    public void testStudentGradeAvg() {
+        jeremy.addGrade(100);
+        jeremy.addGrade(95);
+        jeremy.addGrade(91);
+        jeremy.addGrade(96);
 
-//    test empty strings and null values
-//    add grade
+//        Integer [] testGrades = {50, 60, 80};
+//        System.out.println(jeremy.getGradeAverage());
+        assertEquals(95.5, jeremy.getGradeAverage(), 0.00001);
+    }
+
 //    get average
 
 
