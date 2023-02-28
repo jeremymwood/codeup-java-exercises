@@ -39,12 +39,6 @@ public class StudentTest {
         jeremy.addGrade(91);
         jeremy.addGrade(96);
 
-//        Integer [] testGrades = {50, 60, 80};
-//        System.out.println(jeremy.getGradeAverage());
         assertEquals(95.5, jeremy.getGradeAverage(), 0.00001);
     }
-
-//    get average
-
-
 }
